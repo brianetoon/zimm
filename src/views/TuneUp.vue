@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>About page</h1>
+  <div class="tune-up">
+    <h1>Tune Up & Repair page</h1>
   </div>
 </template>
 

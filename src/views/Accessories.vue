@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>About page</h1>
+  <div class="accessories">
+    <h1>Accessories page</h1>
   </div>
 </template>
 
@@ -15,4 +15,3 @@
 <style>
 
 </style>
-
