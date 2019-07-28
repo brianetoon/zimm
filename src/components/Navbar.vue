@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <v-toolbar flat app dark id="main-nav" height="100">
+        <v-toolbar flat dark id="main-nav" height="100">
             <v-toolbar-side-icon large @click="drawer = !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
             <v-toolbar-items class="hidden-sm-and-down">
                 <v-btn flat v-for="link in links" :key="link.name" router :to="link.route">

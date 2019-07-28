@@ -6,6 +6,7 @@ import Systems from './views/Systems'
 import Accessories from './views/Accessories'
 import TuneUp from './views/TuneUp'
 import About from './views/About'
+import Test from './views/Test'
 
 Vue.use(Router)
 
@@ -42,6 +43,11 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: About
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: Test
     }
   ]
 })
