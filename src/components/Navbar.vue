@@ -15,6 +15,29 @@
             </v-toolbar-title>
 
         </v-toolbar>
+
+        <v-navigation-drawer disable-resize-watcher v-model="drawer" app class="light-blue darken-3">
+
+            <v-layout column align-center>
+                <v-flex class="mt-5">
+                    <img src="/round-logo.png" alt="round-logo">
+                </v-flex>
+            </v-layout>
+
+            <v-list class="mt-3">
+                <v-list-tile v-for="link in links" :key="link.name" router :to="link.route">
+                    <v-list-tile-action>
+                        <v-icon class="white--text">{{ link.icon }}</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                        <v-list-tile-title class="white--text text-uppercase">
+                            {{ link.name }}
+                        </v-list-tile-title>
+                    </v-list-tile-content>
+                </v-list-tile>
+            </v-list>
+        </v-navigation-drawer>
+
     </nav>
 </template>
 
@@ -23,12 +46,12 @@ export default {
     data(){
         return{
             links: [
-                { name: 'home', route: '/'},
-                { name: 'installation', route: '/installation'},
-                { name: 'systems', route: '/systems'},
-                { name: 'accessories', route: '/accessories'},
-                { name: 'tune up & repair', route: '/tune-up-and-repair'},
-                { name: 'about', route: '/about'},
+                { name: 'home', icon: 'home', route: '/'},
+                { name: 'installation', icon: 'settings', route: '/installation'},
+                { name: 'systems', icon: 'list', route: '/systems'},
+                { name: 'accessories', icon: 'toys', route: '/accessories'},
+                { name: 'tune up & repair', icon: 'build', route: '/tune-up-and-repair'},
+                { name: 'about', icon: 'info', route: '/about'},
             ],
             drawer: false
         }

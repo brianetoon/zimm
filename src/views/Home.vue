@@ -75,7 +75,7 @@
     height:350px;
   }
   .logo{
-    width: 180px;
+    width: 160px;
   }
   .body-text{
     font-size: 30px;
