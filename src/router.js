@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home'
 import Installation from './views/Installation'
+import InstallChild from './views/InstallChild'
 import Systems from './views/Systems'
 import Accessories from './views/Accessories'
 import TuneUp from './views/TuneUp'
@@ -23,6 +24,11 @@ export default new Router({
       path: '/installation',
       name: 'installation',
       component: Installation
+    },
+    {
+      path: '/installation/:install_slug',
+      name: 'InstallChild',
+      component: InstallChild
     },
     {
       path: '/systems',

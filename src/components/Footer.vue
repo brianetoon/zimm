@@ -15,11 +15,11 @@
 
             <v-layout row justify-space-between align-center class="pt-3">
                 <v-flex>
-                    <v-btn flat large class="white font-weight-bold light-blue--text text--darken-3 contact-button" width="300px">CONTACT ZIMM'S</v-btn>
+                    <v-btn flat large class="white font-weight-bold light-blue--text text--darken-3 contact-button text">CONTACT ZIMM'S</v-btn>
                     <span  class="text white--text font-weight-bold pl-4 hidden-sm-and-down">Learn more about Zimm’s Central Vacuum Systems</span>
                 </v-flex>
                 <v-flex xs3 sm2 md1 class="logo">
-                    <v-img src="round-logo.png" height="75" width="75"></v-img>
+                    <img src="../assets/round-logo.png" height="75" width="75" />
                 </v-flex>
             </v-layout>
         </v-container>
@@ -40,7 +40,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .footer{
     background-image: url("../assets/nav-gradient.png");
     background-position: center;
@@ -56,9 +56,20 @@ export default {
 .logo{
     width: 100px;
 }
-@media (min-width: 600px){
+.text {
+    font-size: 16px;
+}
+/* extra small devices */
+@media (max-width: 599px){
+    .contact-button{
+        width: 230px;
+    }
+}
+
+/* medium devices and up */
+@media (min-width: 960px){
     .text{
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 </style>

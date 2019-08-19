@@ -2,7 +2,7 @@
   <v-app>
     <Navbar />
     <v-content>
-      <router-view></router-view>
+      <router-view :key="$route.fullPath"></router-view>
     </v-content>
     <Footer />
   </v-app>
@@ -25,3 +25,10 @@ export default {
   }
 }
 </script>
+
+<style>
+#app{
+  font-family: freight-sans-pro, sans-serif;
+  font-style: normal;
+}
+</style>

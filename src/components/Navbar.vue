@@ -4,14 +4,14 @@
             <v-toolbar-side-icon large @click="drawer = !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
             <v-toolbar-items class="hidden-sm-and-down">
                 <v-btn flat v-for="link in links" :key="link.name" router :to="link.route">
-                    {{ link.name }}
+                    <span class="text font-weight-bold">{{ link.name }}</span>
                 </v-btn>
             </v-toolbar-items>
 
             <v-spacer></v-spacer>
             
             <v-toolbar-title>
-                <v-img src="round-logo.png" height="75" width="75"></v-img>
+                <img src="../assets/round-logo.png" height="75" width="75" />
             </v-toolbar-title>
 
         </v-toolbar>
@@ -30,7 +30,7 @@
                         <v-icon class="white--text">{{ link.icon }}</v-icon>
                     </v-list-tile-action>
                     <v-list-tile-content>
-                        <v-list-tile-title class="white--text text-uppercase">
+                        <v-list-tile-title class="white--text text-uppercase font-weight-bold">
                             {{ link.name }}
                         </v-list-tile-title>
                     </v-list-tile-content>
@@ -59,7 +59,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #main-nav{
     background-image: url("../assets/nav-gradient.png");
     background-position: center;
@@ -68,5 +68,12 @@ export default {
 }
 .v-icon{
     font-size: 35px;
+}
+/* medium devices and up */
+@media (min-width: 960px){
+    .text{
+        font-size: 16px;
+        font-weight: 500;
+    }
 }
 </style>

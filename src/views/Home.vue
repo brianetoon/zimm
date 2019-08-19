@@ -3,10 +3,10 @@
     <v-container fluid fill-height class="home-banner">
       <v-layout row wrap align-content-space-between>
         <v-flex xs6>
-          <img class="logo" src="../assets/horiz-logo.png" alt="">
+          <img class="logo" src="../assets/horiz-logo.png" alt="logo">
         </v-flex>
-        <v-flex xs7>
-          <h2 class="hidden-sm-and-down font-weight-light grey--text text--darken-2 banner-text">Discover central vacuum <br>for a cleaner, healthier home</h2>
+        <v-flex xs8>
+          <h2 class="hidden-sm-and-down font-weight-regular grey--text text--darken-2 banner-text">Discover central vacuum <br>for a cleaner, healthier home</h2>
         </v-flex>
       </v-layout>
     </v-container>
@@ -15,16 +15,16 @@
 
       <v-layout row wrap class="hidden-md-and-up">
         <v-flex xs12 class="pa-2">
-          <h2 class="font-weight-light grey--text text--darken-2 body-text">Discover central vacuum for a cleaner, healthier home</h2>
+          <h2 class="font-weight-regular grey--text text--darken-2 body-text">Discover central vacuum for a cleaner, healthier home</h2>
         </v-flex>
       </v-layout>
 
       <v-layout row wrap justify-center class="pt-3">
         <v-flex xs12 sm6 md4 class="pa-2" v-for="card in cards" :key="card.id">
-          <v-card class="text-xs-center">
-            <img :src="card.img" width="100%">
+          <v-card flat class="text-xs-center">
+            <img :src="getPicUrl(card.img)" width="100%">
             <v-card-text>
-              <div class="title grey--text text--darken-2"> {{ card.text1 }} <br class="hidden-xs-only"> {{ card.text2 }} </div>
+              <div class="title grey--text text--darken-2 font-weight-medium"> {{ card.text1 }} <br class="hidden-xs-only"> {{ card.text2 }} </div>
             </v-card-text>
           </v-card>
         </v-flex>
@@ -32,7 +32,7 @@
       
       <v-layout row wrap class="my-2">
         <v-flex xs12 class="pa-2">
-          <h2 class="font-weight-light grey--text text--darken-2 body-text">Zimm's - the best in central vacuum installation and service</h2>
+          <h2 class="font-weight-regular grey--text text--darken-2 body-text">Zimm's - the best in central vacuum installation and service</h2>
         </v-flex>
       </v-layout>
 
@@ -47,19 +47,25 @@
     data(){
       return{
         cards:[
-          { img: '/pup.png', text1: 'Five times the power of', text2: 'a traditional vacuum', id: '1'},
-          { img: '/ltweight.png', text1: 'Lightweight and', text2: 'easy to handle', id: '2'},
-          { img: '/family.png', text1: 'Dust-free for a', text2: 'healthier home', id: '3'},
-          { img: '/man-van.png', text1: 'Second generation', text2: 'family-owned business', id: '4'},
-          { img: '/service.png', text1: 'Full-service installation,', text2: 'repair and accessories', id: '5'},
-          { img: '/30-year-nozzle.png', text1: '30 years experience in', text2: 'central vacuum service', id: '6'},
+          { img: 'pup.png', text1: 'Five times the power of', text2: 'a traditional vacuum', id: '1'},
+          { img: 'ltweight.png', text1: 'Lightweight and', text2: 'easy to handle', id: '2'},
+          { img: 'family.png', text1: 'Dust-free for a', text2: 'healthier home', id: '3'},
+          { img: 'man-van.png', text1: 'Second generation', text2: 'family-owned business', id: '4'},
+          { img: 'service.png', text1: 'Full-service installation,', text2: 'repair and accessories', id: '5'},
+          { img: '30-year-nozzle.png', text1: '30 years experience in', text2: 'central vacuum service', id: '6'},
         ]
+      }
+    },
+    methods: {
+      getPicUrl(img){
+          var images = require.context('../assets/', true, /\.png$/)
+          return images('./' + img)
       }
     }
   }
 </script>
 
-<style>
+<style scoped>
 .home-banner{
   background-image: url("../assets/home-banner.png");
   background-position: center;
@@ -75,10 +81,10 @@
     height:350px;
   }
   .logo{
-    width: 160px;
+    width: 140px;
   }
   .body-text{
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 /* small devices */
@@ -102,7 +108,7 @@
     width: 250px;
   }
   .banner-text{
-    font-size: 30px;
+    font-size: 32px;
     padding-left: 150px;
   }
   .body-text{
@@ -118,11 +124,11 @@
     width: 275px;
   }
   .banner-text{
-    font-size: 35px;
+    font-size: 45px;
     padding-left: 230px;
   }
   .body-text{
-    font-size: 35px;
+    font-size: 45px;
   }
 }
 </style>
