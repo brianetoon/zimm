@@ -11,32 +11,34 @@
       </v-layout>
     </v-container>
 
-    <v-container>
+    <div class="body-bkgd">
+      <v-container>
 
-      <v-layout row wrap class="hidden-md-and-up">
-        <v-flex xs12 class="pa-2">
-          <h2 class="font-weight-regular grey--text text--darken-2 body-text">Discover central vacuum for a cleaner, healthier home</h2>
-        </v-flex>
-      </v-layout>
+        <v-layout row wrap class="hidden-md-and-up">
+          <v-flex xs12 class="pa-2">
+            <h2 class="font-weight-regular grey--text text--darken-2 body-text">Discover central vacuum for a cleaner, healthier home</h2>
+          </v-flex>
+        </v-layout>
 
-      <v-layout row wrap justify-center class="pt-3">
-        <v-flex xs12 sm6 md4 class="pa-2" v-for="card in cards" :key="card.id">
-          <v-card flat class="text-xs-center">
-            <img :src="getPicUrl(card.img)" width="100%">
-            <v-card-text>
-              <div class="title grey--text text--darken-2 font-weight-medium"> {{ card.text1 }} <br class="hidden-xs-only"> {{ card.text2 }} </div>
-            </v-card-text>
-          </v-card>
-        </v-flex>
-      </v-layout>
-      
-      <v-layout row wrap class="my-2">
-        <v-flex xs12 class="pa-2">
-          <h2 class="font-weight-regular grey--text text--darken-2 body-text">Zimm's - the best in central vacuum installation and service</h2>
-        </v-flex>
-      </v-layout>
+        <v-layout row wrap justify-center class="pt-3">
+          <v-flex xs12 sm6 md4 class="pa-2" v-for="card in cards" :key="card.id">
+            <v-card flat class="text-xs-center transparent">
+              <img :src="getPicUrl(card.img)" width="100%">
+              <v-card-text>
+                <div class="title grey--text text--darken-2 font-weight-medium"> {{ card.text1 }} <br class="hidden-xs-only"> {{ card.text2 }} </div>
+              </v-card-text>
+            </v-card>
+          </v-flex>
+        </v-layout>
+        
+        <v-layout row wrap class="my-2">
+          <v-flex xs12 class="pa-2">
+            <h2 class="font-weight-regular grey--text text--darken-2 body-text">Zimm's - the best in central vacuum installation and service</h2>
+          </v-flex>
+        </v-layout>
 
-    </v-container>
+      </v-container>
+    </div>
   </div>
 </template>
 
@@ -72,7 +74,12 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-
+.body-bkgd{
+  background-image: url("../assets/blue-dots.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 /* Media Queries */
 
 /* extra small devices */
@@ -86,6 +93,9 @@
   .body-text{
     font-size: 28px;
   }
+  .body-bkgd{
+    background-image: none;
+  }
 }
 /* small devices */
 @media (min-width: 600px) and (max-width: 959px){
@@ -97,6 +107,9 @@
   }
   .body-text{
     font-size: 32px;
+  }
+  .body-bkgd{
+    background-image: none;
   }
 }
 /* medium devices */

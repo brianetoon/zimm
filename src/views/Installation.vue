@@ -39,13 +39,11 @@
 
         <v-layout row wrap class="pt-2">
           <v-flex xs12 sm6 md4 class="pa-2" v-for="type in types" :key="type.title">
-            <v-card class="text-xs-center light-blue darken-3">
+            <v-card hover class="text-center card-bkgd" router :to="{ name: 'InstallChild', params: { install_slug: type.slug }}">
               <img :src="getPicUrl(type.btnImg)" width="100%">
-              <v-card-text class="pa-0">
-                <v-btn flat class="title white--text" router :to="{ name: 'InstallChild', params: { install_slug: type.slug }}">
-                  {{ type.title }} 
-                </v-btn>
-              </v-card-text>
+              <v-card-title width="auto" class="white--text justify-center title card-title">
+                {{ type.title }}
+              </v-card-title>
             </v-card>
           </v-flex>
         </v-layout>
@@ -105,6 +103,17 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.card-bkgd{
+  background-image: url("../assets/nav-gradient.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-title{
+  font-family: freight-sans-pro, sans-serif !important;
+  font-weight: 500;
+  font-size: 24px !important;
 }
 .basic-text{
   font-size: 18px;
