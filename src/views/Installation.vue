@@ -5,13 +5,13 @@
       <v-container fill-height>
         <v-layout row wrap align-end fill-height>
           <v-flex>
-            <h2 class="font-weight-regular grey--text text--darken-2 banner-text">Central vacuum installation <br class="hidden-sm-only">for home and business</h2>
+            <h2 class="font-weight-regular grey--text text--darken-2 banner-text">Central vacuum installation <br>for home and business</h2>
           </v-flex>
         </v-layout>
       </v-container>
     </v-container>
 
-    <div class="body-bkgd">
+    <div class="inst-bkgd">
       <v-container>
         
         <v-layout row wrap>
@@ -23,7 +23,7 @@
         <v-layout row wrap>
 
           <v-flex xs12 md5>
-            <img class="logo" src="../assets/horiz-logo.png" alt="logo" width="200px">
+            <img src="../assets/horiz-logo.png" alt="logo" width="200px">
             <p class="basic-text grey--text text--darken-2" v-for="(para, index) in intro" :key="index">{{ para }}</p>
           </v-flex>
 
@@ -39,9 +39,9 @@
 
         <v-layout row wrap class="pt-2">
           <v-flex xs12 sm6 md4 class="pa-2" v-for="type in types" :key="type.title">
-            <v-card hover class="text-center card-bkgd" router :to="{ name: 'InstallChild', params: { install_slug: type.slug }}">
+            <v-card hover class="text-center card-bkgd" router :to="{ name: 'install-child', params: { install_slug: type.slug }}">
               <img :src="getPicUrl(type.btnImg)" width="100%">
-              <v-card-title width="auto" class="white--text justify-center title card-title">
+              <v-card-title class="white--text justify-center title card-title pt-2">
                 {{ type.title }}
               </v-card-title>
             </v-card>
@@ -98,9 +98,13 @@
   background-repeat: no-repeat;
   padding: 0;
 }
-.body-bkgd{
+.banner-text{
+  letter-spacing: -1.5px;
+  line-height: 1;
+}
+.inst-bkgd{
   background-image: url("../assets/blue-dots.png");
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -133,9 +137,9 @@
     height:350px;
   }
   .banner-text{
-    font-size: 28px;
+    font-size: 32px;
   }
-  .body-bkgd{
+  .inst-bkgd{
     background-image: none;
   }
 }
@@ -145,9 +149,9 @@
     height: 450px;
   }
   .banner-text{
-    font-size: 32px;
+    font-size: 38px;
   }
-  .body-bkgd{
+  .inst-bkgd{
     background-image: none;
   }
 }
@@ -157,7 +161,7 @@
     height: 550px;
   }
   .banner-text{
-    font-size: 32px;
+    font-size: 42px;
   }
   .right-col{
     padding-left: 20px;
@@ -169,7 +173,7 @@
     height: 700px;
   }
   .banner-text{
-    font-size: 45px;
+    font-size: 55px;
   }
   .right-col{
     padding-left: 20px;

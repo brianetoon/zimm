@@ -11,7 +11,7 @@
             </v-container>
         </v-container>
 
-        <div class="body-bkgd">
+        <div class="inst-child-bkgd">
             <v-container>
                 
                 <v-layout row wrap>
@@ -51,7 +51,7 @@
 import db from '@/fb'
 
 export default {
-    name: 'InstallChild',
+    name: 'install-child',
     data(){
         return{
             child: null
@@ -61,7 +61,6 @@ export default {
         let ref = db.collection('installChildren').where('slug', '==', this.$route.params.install_slug)
         ref.get().then(snapshot =>{
             snapshot.forEach(doc => {
-                // console.log(doc.data())
                 this.child = doc.data()
                 this.child.id = doc.id
             })
@@ -83,9 +82,13 @@ export default {
   background-repeat: no-repeat;
   padding: 0;
 }
-.body-bkgd{
+.install-child .banner-text{
+  letter-spacing: -1.5px;
+  line-height: 1;
+}
+.inst-child-bkgd{
   background-image: url("../assets/blue-dots.png");
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -104,10 +107,10 @@ export default {
   .install-child-banner{
     height:350px;
   }
-  .banner-text{
-    font-size: 28px;
+  .install-child .banner-text{
+    font-size: 32px;
   }
-  .body-bkgd{
+  .inst-child-bkgd{
     background-image: none;
   }
 }
@@ -116,10 +119,10 @@ export default {
   .install-child-banner{
     height: 450px;
   }
-  .banner-text{
-    font-size: 32px;
+  .install-child .banner-text{
+    font-size: 38px;
   }
-  .body-bkgd{
+  .inst-child-bkgd{
     background-image: none;
   }
 }
@@ -128,8 +131,8 @@ export default {
   .install-child-banner{
     height: 550px;
   }
-  .banner-text{
-    font-size: 32px;
+  .install-child .banner-text{
+    font-size: 42px;
   }
   .right-col{
     padding-left: 20px;
@@ -140,8 +143,8 @@ export default {
   .install-child-banner{
     height: 700px;
   }
-  .banner-text{
-    font-size: 45px;
+  .install-child .banner-text{
+    font-size: 55px;
   }
   .right-col{
     padding-left: 20px;

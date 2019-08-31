@@ -4,6 +4,7 @@ import Home from './views/Home'
 import Installation from './views/Installation'
 import InstallChild from './views/InstallChild'
 import Systems from './views/Systems'
+import SystemsChild from './views/SystemsChild'
 import Accessories from './views/Accessories'
 import TuneUp from './views/TuneUp'
 import About from './views/About'
@@ -27,13 +28,18 @@ export default new Router({
     },
     {
       path: '/installation/:install_slug',
-      name: 'InstallChild',
+      name: 'install-child',
       component: InstallChild
     },
     {
       path: '/systems',
       name: 'systems',
       component: Systems
+    },
+    {
+      path: '/systems/:systems_slug',
+      name: 'systems-child',
+      component: SystemsChild
     },
     {
       path: '/accessories',
