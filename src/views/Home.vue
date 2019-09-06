@@ -22,7 +22,7 @@
             <v-layout row wrap>
               <v-flex xs12>
                 <div class="py-3" v-for="(section, index) in intro" :key="index">
-                  <h2 class="grey--text text--darken-2 font-weight-bold" v-if="section.subhead">{{ section.subhead }}</h2>
+                  <h2 class="grey--text text--darken-2 font-weight-bold subhead" v-if="section.subhead">{{ section.subhead }}</h2>
                   <p class="basic-text grey--text text--darken-2 ma-0 pt-2" v-for="(point, index) in section.points" :key="index">
                     {{ point }}
                   </p>
@@ -106,6 +106,9 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.home .subhead{
+  line-height: 1.2;
+}
 /* Media Queries */
 
 /* extra small devices */
@@ -116,8 +119,8 @@
   .logo{
     width: 150px;
   }
-  .banner-text{
-    font-size: 31px;
+  .home .banner-text{
+    font-size: 30px;
   }
   .body-text{
     font-size: 28px;

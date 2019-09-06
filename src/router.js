@@ -6,7 +6,9 @@ import InstallChild from './views/InstallChild'
 import Systems from './views/Systems'
 import SystemsChild from './views/SystemsChild'
 import Accessories from './views/Accessories'
+import AccessoryChild from './views/AccessoryChild'
 import TuneUp from './views/TuneUp'
+import TuneupChild from './views/TuneupChild'
 import About from './views/About'
 import Test from './views/Test'
 
@@ -47,9 +49,19 @@ export default new Router({
       component: Accessories
     },
     {
+      path: '/accessories/:accessory_slug',
+      name: 'accessory-child',
+      component: AccessoryChild
+    },
+    {
       path: '/tune-up-and-repair',
       name: 'tune-up',
       component: TuneUp
+    },
+    {
+      path: '/tune-up-and-repair/:tuneup_slug',
+      name: 'tune-up-child',
+      component: TuneupChild
     },
     {
       path: '/about',

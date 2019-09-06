@@ -69,6 +69,7 @@ export default {
 .v-icon{
     font-size: 35px;
 }
+
 /* medium devices and up */
 @media (min-width: 960px){
     .text{

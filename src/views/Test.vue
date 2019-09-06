@@ -2,6 +2,14 @@
   <div class="about">
     <v-container fluid fill-height class="grey lighten-4 banner">
 
+      <v-layout row wrap>
+        <v-flex xs12 md6>
+          <video width="100%" controls>
+            <source src="../assets/hah.mp4" type="video/mp4">
+          </video>
+        </v-flex>
+      </v-layout>
+
         <!-- <v-layout row wrap align-center>
             <v-flex class="text-xs-center">
                 <v-btn>test</v-btn>
@@ -32,7 +40,7 @@
             </v-flex>
         </v-layout> -->
 
-        <v-layout row wrap> 
+        <!-- <v-layout row wrap> 
 
           <v-flex xs5>
             <v-card>
@@ -57,7 +65,7 @@
             </v-card>
           </v-flex>
 
-        </v-layout>
+        </v-layout> -->
 
 
     </v-container>

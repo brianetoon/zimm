@@ -15,7 +15,8 @@
 
             <v-layout row justify-space-between align-center class="pt-3">
                 <v-flex>
-                    <v-btn flat large class="white font-weight-bold light-blue--text text--darken-3 contact-button text">CONTACT ZIMM'S</v-btn>
+                    <Popup />
+                    <!-- <v-btn flat large class="white font-weight-bold light-blue--text text--darken-3 contact-button text">CONTACT ZIMM'S</v-btn> -->
                     <span  class="text white--text font-weight-bold pl-4 hidden-sm-and-down">Learn more about Zimm’s Central Vacuum Systems</span>
                 </v-flex>
                 <v-flex xs3 sm2 md1 class="logo">
@@ -27,7 +28,10 @@
 </template>
 
 <script>
+import Popup from './Popup'
+
 export default {
+    components: { Popup },
     data(){
         return{
             contacts: [
@@ -50,20 +54,11 @@ export default {
 .wrapper{
     display: inline-block;
 }
-.contact-button{
-    width: 250px;
-}
 .logo{
     width: 100px;
 }
 .text {
     font-size: 16px;
-}
-/* extra small devices */
-@media (max-width: 599px){
-    .contact-button{
-        width: 230px;
-    }
 }
 
 /* medium devices and up */

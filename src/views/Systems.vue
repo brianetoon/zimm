@@ -1,7 +1,7 @@
 <template>
   <div class="systems">
     
-    <v-container fluid fill-height class="install-banner">
+    <v-container fluid fill-height class="systems-banner">
       <v-container fill-height>
         <v-layout row wrap align-end fill-height>
           <v-flex>
@@ -35,9 +35,12 @@
             <div v-for="type in types" :key="type.title" class="py-2">
               <v-card hover class="text-center card-bkgd" router :to="{ name: 'systems-child', params: { systems_slug: type.slug }}">
                 <img :src="getPicUrl(type.btnImg)" width="100%">
-                <v-card-title class="white--text justify-center title card-title pt-2">
+                <v-card-title class="white--text justify-center title card-title pt-2 pb-0">
                   {{ type.title }}
                 </v-card-title>
+                <v-card-text class="pa-0 text-xs-center">
+                  <p class="white--text basic-text pb-2">click to see more</p>
+                </v-card-text>
               </v-card>
             </div>
             
@@ -84,7 +87,7 @@
 </script>
 
 <style>
-.install-banner{
+.systems-banner{
   background-image: url("../assets/systems-banner.png");
   background-position: center;
   background-size: cover;
@@ -102,7 +105,7 @@
   background-repeat: no-repeat;
 }
 .card-bkgd{
-  background-image: url("../assets/nav-gradient.png");
+  background-image: url("../assets/card-bkgd.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -124,7 +127,7 @@
 
 /* extra small devices */
 @media (max-width: 599px){
-  .install-banner{
+  .systems-banner{
     height:350px;
   }
   .banner-text{
@@ -136,7 +139,7 @@
 }
 /* small devices */
 @media (min-width: 600px) and (max-width: 959px){
-  .install-banner{
+  .systems-banner{
     height: 450px;
   }
   .banner-text{
@@ -151,7 +154,7 @@
 }
 /* medium devices */
 @media (min-width: 960px) and (max-width: 1263px){
-  .install-banner{
+  .systems-banner{
     height: 550px;
   }
   .banner-text{
@@ -163,7 +166,7 @@
 }
 /* large devices */
 @media (min-width: 1264px){
-  .install-banner{
+  .systems-banner{
     height: 700px;
   }
   .banner-text{

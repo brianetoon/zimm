@@ -28,8 +28,8 @@
           </v-flex>
 
           <v-flex xs12 md7 class="right-col">
-            <h1 class="sub-head grey--text text--darken-2 py-1">Why install a central vacuum system?</h1>
-            <div class="pb-2" v-for="point in points" :key="point.category">
+            <h1 class="sub-head grey--text text--darken-2 py-3">Why install a central vacuum system?</h1>
+            <div class="py-2" v-for="point in points" :key="point.category">
               <h2 class="text-uppercase grey--text text--darken-2">{{ point.category }}</h2>
               <p class="point basic-text grey--text text--darken-2 pb-1" v-for="bullet in point.bullets" :key="bullet">{{ bullet }}</p>
             </div>
@@ -37,13 +37,16 @@
 
         </v-layout>
 
-        <v-layout row wrap class="pt-2">
-          <v-flex xs12 sm6 md4 class="pa-2" v-for="type in types" :key="type.title">
+        <v-layout row wrap class="pt-4">
+          <v-flex xs12 sm6 md4 class="pa-2" v-for="(type, index) in types" :key="index">
             <v-card hover class="text-center card-bkgd" router :to="{ name: 'install-child', params: { install_slug: type.slug }}">
               <img :src="getPicUrl(type.btnImg)" width="100%">
-              <v-card-title class="white--text justify-center title card-title pt-2">
+              <v-card-title class="white--text justify-center title card-title pt-2 pb-0">
                 {{ type.title }}
               </v-card-title>
+              <v-card-text class="pa-0 text-xs-center">
+                <p class="white--text basic-text pb-2">click to see more</p>
+              </v-card-text>
             </v-card>
           </v-flex>
         </v-layout>
@@ -109,7 +112,7 @@
   background-repeat: no-repeat;
 }
 .card-bkgd{
-  background-image: url("../assets/nav-gradient.png");
+  background-image: url("../assets/card-bkgd.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -124,7 +127,10 @@
   font-weight: 500;
 }
 .sub-head{
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: -1px;
+  line-height: 1;
 }
 .point{
   margin: 0;
