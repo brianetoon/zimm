@@ -1,5 +1,11 @@
 <template>
     <div class="footer">
+
+        <v-snackbar v-model="snackbar" :timeout="4000" top color="primary" class="pt-4">
+            <span class="text">Your message has been sent!</span>
+            <v-btn flat color="white" @click="snackbar = false">Close</v-btn>
+        </v-snackbar>
+
         <v-container>
             <v-layout row wrap >
                 <v-flex class="border pb-1" lg3 v-for="(contact, index) in contacts" :key="index">
@@ -15,7 +21,7 @@
 
             <v-layout row justify-space-between align-center class="pt-3">
                 <v-flex>
-                    <Popup />
+                    <Popup @messageSent="snackbar = true"/>
                     <!-- <v-btn flat large class="white font-weight-bold light-blue--text text--darken-3 contact-button text">CONTACT ZIMM'S</v-btn> -->
                     <span  class="text white--text font-weight-bold pl-4 hidden-sm-and-down">Learn more about Zimm’s Central Vacuum Systems</span>
                 </v-flex>
@@ -38,7 +44,8 @@ export default {
                {icon: 'phone', line1: 'Office', line2: '866-829-0021'},
                {icon: 'alternate_email', line1: 'email', line2: 'info@zimmscentralvac.com'},
                {icon: 'email', line1: 'PO Box 776', line2: 'Farmington, Michigan 48332'},
-            ]
+            ],
+            snackbar: false
         }
     }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="home white">
     <v-container fluid fill-height class="home-banner pa-0">
-      <v-container fill-height>
+      <v-container fill-height class="xs-home">
         <v-layout row wrap align-content-space-between>
         <v-flex xs6>
           <img class="logo" src="../assets/horiz-logo.png" alt="logo">
@@ -127,6 +127,9 @@
   }
   .home-bkgd{
     background-image: none;
+  }
+  .xs-home{
+    padding-bottom: 5px;
   }
 }
 /* small devices */

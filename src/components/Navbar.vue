@@ -1,5 +1,6 @@
 <template>
     <nav>
+
         <v-toolbar flat dark id="main-nav" height="100">
             <v-toolbar-side-icon large @click="drawer = !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
             <v-toolbar-items class="hidden-sm-and-down">
@@ -53,7 +54,7 @@ export default {
                 { name: 'tune up & repair', icon: 'build', route: '/tune-up-and-repair'},
                 { name: 'about', icon: 'info', route: '/about'},
             ],
-            drawer: false
+            drawer: false,
         }
     }
 }
@@ -69,7 +70,6 @@ export default {
 .v-icon{
     font-size: 35px;
 }
-
 /* medium devices and up */
 @media (min-width: 960px){
     .text{
