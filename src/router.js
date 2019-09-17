@@ -10,7 +10,6 @@ import AccessoryChild from './views/AccessoryChild'
 import TuneUp from './views/TuneUp'
 import TuneupChild from './views/TuneupChild'
 import About from './views/About'
-import Test from './views/Test'
 
 Vue.use(Router)
 
@@ -68,10 +67,9 @@ export default new Router({
       name: 'about',
       component: About
     },
-    {
-      path: '/test',
-      name: 'test',
-      component: Test
+    { 
+      path: '*', 
+      redirect: '/' 
     }
   ]
 })
