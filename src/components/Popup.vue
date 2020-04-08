@@ -61,9 +61,6 @@ export default {
     methods: {
         submit() {
             if(this.$refs.form.validate()){
-                // console.log('sumbmitted')
-                // this.dialog = false;
-                // this.$emit('messageSent')
                 this.submitting = true;
                 axios.post('mail.php', this.form).then(() => {
                     this.submitting = false;

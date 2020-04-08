@@ -49,7 +49,7 @@ export default {
             links: [
                 { name: 'home', icon: 'home', route: '/'},
                 { name: 'installation', icon: 'settings', route: '/installation'},
-                { name: 'systems', icon: 'list', route: '/systems'},
+                { name: 'system upgrades', icon: 'list', route: '/system-upgrades'},
                 { name: 'accessories', icon: 'toys', route: '/accessories'},
                 { name: 'tune up & repair', icon: 'build', route: '/tune-up-and-repair'},
                 { name: 'about', icon: 'info', route: '/about'},

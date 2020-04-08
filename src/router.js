@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import Home from './views/Home'
 import Installation from './views/Installation'
 import InstallChild from './views/InstallChild'
-import Systems from './views/Systems'
-import SystemsChild from './views/SystemsChild'
+import SystemUpgrades from './views/SystemUpgrades'
+// import SystemsChild from './views/SystemsChild'
 import Accessories from './views/Accessories'
 import AccessoryChild from './views/AccessoryChild'
 import TuneUp from './views/TuneUp'
@@ -33,15 +33,15 @@ export default new Router({
       component: InstallChild
     },
     {
-      path: '/systems',
-      name: 'systems',
-      component: Systems
+      path: '/system-upgrades',
+      name: 'system-upgrades',
+      component: SystemUpgrades
     },
-    {
-      path: '/systems/:systems_slug',
-      name: 'systems-child',
-      component: SystemsChild
-    },
+    // {
+    //   path: '/systems/:systems_slug',
+    //   name: 'systems-child',
+    //   component: SystemsChild
+    // },
     {
       path: '/accessories',
       name: 'accessories',

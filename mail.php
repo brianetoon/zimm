@@ -7,12 +7,12 @@ $mail = new PHPMailer();
 $mail->isSMTP();
 $mail->Host = '2xz6-hs75.accessdomain.com';
 $mail->SMTPAuth = true;
-$mail->Username = "info@zimmscentralvac.com"; //*
+$mail->Username = "dan@zimmscentralvac.com"; //*
 $mail->Password =  "Silverton41!"; //*
 $mail->SMTPSecure = 'tls';
 $mail->Port = 587;
-$mail->From = 'info@zimmscentralvac.com'; // *
-$mail->addAddress('info@zimmscentralvac.com'); // *
+$mail->From = 'dan@zimmscentralvac.com'; // *
+$mail->addAddress('dan@zimmscentralvac.com'); // *
 $mail->FromName = "Zimm's Central Vac Inquiry"; // *
 $mail->WordWrap = 50;
 $mail->isHTML(true);

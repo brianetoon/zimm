@@ -1,11 +1,11 @@
 <template>
   <div class="systems">
     
-    <v-container fluid fill-height class="systems-banner">
+    <v-container fluid fill-height class="system-upgrades-banner">
       <v-container fill-height>
         <v-layout row wrap align-end fill-height>
           <v-flex>
-            <h2 class="font-weight-regular grey--text text--darken-2 banner-text">Central vacuum systems  <br>to fit every home and business</h2>
+            <h2 class="font-weight-regular grey--text text--darken-2 banner-text">System Upgrades</h2>
           </v-flex>
         </v-layout>
       </v-container>
@@ -21,31 +21,47 @@
         </v-layout>
 
         <v-layout row wrap>
-          <v-flex xs12 sm6 md8>
+          <v-flex xs12  lg3>
             <img src="../assets/horiz-logo.png" alt="logo" width="200px">
-            <div v-for="(section, index) in intro" :key="index">
-              <h2 class="grey--text text--darken-2 font-weight-bold" v-if="section.subhead">{{ section.subhead }}</h2>
-              <p class="basic-text grey--text text--darken-2">{{ section.paragraph }}</p>
-            </div>
           </v-flex>
-
-          <v-flex xs12 sm6 md4 class="right-col">
-            <img src="../assets/cv-logo.png" alt="cv-logo" width="100%" class="cv-logo pt-3">
-            <p class="basic-text grey--text text--darken-2">Cyclo Vac was introduced in 1960 and meets the highest standards for quality and reliability.</p>
-            <div v-for="type in types" :key="type.title" class="py-2">
-              <v-card hover class="text-center card-bkgd" router :to="{ name: 'systems-child', params: { systems_slug: type.slug }}">
-                <img :src="getPicUrl(type.btnImg)" width="100%">
-                <v-card-title class="white--text justify-center title card-title pt-2 pb-0">
-                  {{ type.title }}
-                </v-card-title>
-                <v-card-text class="pa-0 text-xs-center">
-                  <p class="white--text basic-text pb-2">click to see more</p>
-                </v-card-text>
-              </v-card>
-            </div>
-            
+          <v-flex xs12  lg9>
+            <p class="basic-text grey--text text--darken-2">{{ newintro }}</p>
           </v-flex>
         </v-layout>
+
+      <v-layout row wrap class="mt-2">
+
+        <v-flex xs12 sm12 md6 class="my-1" v-for="(upgrade, index) in upgrades" :key="index">
+            <v-card flat color="transparent" class="piece-of-shit pa-1 my-1">
+              <v-layout row>
+                <v-flex xs6 sm6>
+                  <img
+                    :src="getPicUrl(upgrade.img)"
+                    width="100%"
+                    contain
+                  />
+                </v-flex>
+                <v-flex xs6 sm6 class="pa-0 pl-2" height="100%">
+                  <v-layout column justify-space-between fill-height>
+                    <div>
+                      <h2 class="grey--text text--darken-2">{{ upgrade.name }}</h2>
+                      <p class="card-text grey--text text--darken-2 mb-0">{{ upgrade.info }}</p>
+                    </div>
+                    <div class="mb-2">
+                      <v-btn color="primary font-weight-bold ma-0">See the Video</v-btn>
+                    </div>
+                    
+                  </v-layout>
+                </v-flex>
+                
+              </v-layout>
+            </v-card>
+          </v-flex>
+
+        <v-flex>
+
+        </v-flex>
+      </v-layout>
 
       </v-container>
     </div>
@@ -60,20 +76,21 @@
     data(){
       return{
         items: [],
-        intro: [],
-        types: [],
+        newintro: [],
+        upgrades: [],
       }
     },
     created(){
       // fetch data from the firestore
       db.collection('systems').get()
-      .then(snapshot =>{
+      .then(snapshot => {
         snapshot.forEach(doc => {
+          // console.log(doc.data(), doc.id)
           let systems = doc.data()
           systems.id = doc.id
           this.items = systems.items
-          this.intro = systems.intro
-          this.types = systems.types
+          this.newintro = systems.newintro
+          this.upgrades = systems.upgrades
         })
       })
     },
@@ -87,8 +104,8 @@
 </script>
 
 <style>
-.systems-banner{
-  background-image: url("../assets/systems-banner.png");
+.system-upgrades-banner{
+  background-image: url("../assets/system-upgrades-banner.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -118,16 +135,23 @@
 .basic-text{
   font-size: 18px;
   font-weight: 500;
+
 }
 .cv-logo{
   max-width: 250px;
+}
+.piece-of-shit{
+  max-width: 480px;
+}
+.vid-btn{
+  background: 
 }
 
 /* Media Queries */
 
 /* extra small devices */
 @media (max-width: 599px){
-  .systems-banner{
+  .system-upgrades-banner{
     height:350px;
   }
   .banner-text{
@@ -136,10 +160,15 @@
   .systems-bkgd{
     background-image: none;
   }
+  .card-text{
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.3em;
+  }
 }
 /* small devices */
 @media (min-width: 600px) and (max-width: 959px){
-  .systems-banner{
+  .system-upgrades-banner{
     height: 450px;
   }
   .banner-text{
@@ -148,32 +177,36 @@
   .systems-bkgd{
     background-image: none;
   }
-  .right-col{
-    padding-left: 10px;
+  .card-text{
+    font-size: 18px;
+    font-weight: 500;
   }
 }
 /* medium devices */
 @media (min-width: 960px) and (max-width: 1263px){
-  .systems-banner{
+  .system-upgrades-banner{
     height: 550px;
   }
   .banner-text{
     font-size: 42px;
   }
-  .right-col{
-    padding-left: 20px;
+  .card-text{
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.3em;
   }
 }
 /* large devices */
 @media (min-width: 1264px){
-  .systems-banner{
+  .system-upgrades-banner{
     height: 700px;
   }
   .banner-text{
     font-size: 55px;
   }
-  .right-col{
-    padding-left: 20px;
+  .card-text{
+    font-size: 18px;
+    font-weight: 500;
   }
 }
 </style>
