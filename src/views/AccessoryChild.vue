@@ -1,6 +1,5 @@
 <template>
     <div class="accessory-child accessory-child-bkgd" v-if="child">
-        <!-- <h1>Accessory Child for {{ this.$route.params.accessory_slug }}</h1> -->
         <v-container>
 
             <v-layout row wrap>
@@ -85,7 +84,9 @@ export default {
         }
     },
     created(){
-        let ref = db.collection('accessoryChildren').where('slug', '==', this.$route.params.accessory_slug)
+        let ref = db.collection('accessoryChildren')
+        // .where('slug', '==', this.$route.params.accessory_slug)
+        .where('slug', '==', 'shop-accessories')
         ref.get().then(snapshot =>{
             snapshot.forEach(doc => {
                 this.child = doc.data()
@@ -110,7 +111,6 @@ export default {
 .accessory-child-bkgd{
   background-image: url("../assets/blue-dots.png");
   background-position: top;
-  /* background-size: cover; */
   background-repeat: no-repeat;
 }
 .product-subhead{
@@ -122,14 +122,6 @@ export default {
     font-weight: 500;
     font-size: 16px;
 }
-/* .hah-logo{
-    width: 100%;
-    max-width: 200px;
-}
-.zimm-logo{
-    width: 100%;
-    max-width: 225px;
-} */
 
 /* Media Queries */
 
@@ -141,9 +133,7 @@ export default {
   .accessory-child-bkgd{
     background-image: none;
   }
-  .hah-logo{
-      /* max-width: 170px; */
-  }
+
 }
 /* small devices */
 @media (min-width: 600px) and (max-width: 959px){

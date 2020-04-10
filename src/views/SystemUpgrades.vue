@@ -143,9 +143,6 @@
 .piece-of-shit{
   max-width: 480px;
 }
-.vid-btn{
-  background: 
-}
 
 /* Media Queries */
 
