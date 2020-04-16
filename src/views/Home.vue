@@ -16,6 +16,30 @@
     <div class="home-bkgd">
       <v-container>
 
+        <!-- <v-layout row wrap>
+          <v-flex xs12>
+              <div class="py-3" v-for="(section, index) in intro" :key="index">
+                <h2 class="grey--text text--darken-2 font-weight-bold subhead" v-if="section.subhead">{{ section.subhead }}</h2>
+                <p class="basic-text grey--text text--darken-2 ma-0 pt-2" v-for="(point, index) in section.points" :key="index">
+                  {{ point }}
+                </p>
+              </div>
+          </v-flex>
+        </v-layout>
+
+        <v-layout row wrap>
+
+          <v-flex xs12 sm4 md4 class="pa-2" v-for="(card, index) in cards" :key="index">
+            <v-card hover class="text-center card-bkgd">
+              <img :src="getPicUrl(card.img)" width="100%">
+              <v-card-title class="white--text justify-center text-center title card-title pt-2">
+                {{ card.title }}
+              </v-card-title>
+            </v-card>
+          </v-flex>
+
+        </v-layout> -->
+
         <v-layout row wrap>
           
           <v-flex xs12 md8>
@@ -65,7 +89,8 @@
   export default {
     data(){
       return{
-        intro: []
+        intro: [],
+        cards: []
       }
     },
     created(){
@@ -77,6 +102,7 @@
           let page = doc.data()
           page.id = doc.id
           this.intro = page.intro
+          this.cards = page.cards
         })
       })
     },

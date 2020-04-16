@@ -32,7 +32,7 @@
       <v-layout row wrap class="mt-2">
 
         <v-flex xs12 sm12 md6 class="my-1" v-for="(upgrade, index) in upgrades" :key="index">
-            <v-card flat color="transparent" class="piece-of-shit pa-1 my-1">
+            <v-card flat color="transparent" class="upgrade-card pa-1 my-1">
               <v-layout row>
                 <v-flex xs6 sm6>
                   <img
@@ -48,7 +48,12 @@
                       <p class="card-text grey--text text--darken-2 mb-0">{{ upgrade.info }}</p>
                     </div>
                     <div class="mb-2">
-                      <v-btn color="primary font-weight-bold ma-0">See the Video</v-btn>
+                      <a :href="upgrade.video" target="_blank">
+                        <v-btn color="primary font-weight-bold ma-0">
+                          <img class="mr-2" src="https://img.icons8.com/material/24/ffffff/youtube-play--v1.png"/>
+                          See the Video
+                        </v-btn>
+                      </a>
                     </div>
                     
                   </v-layout>
@@ -140,7 +145,7 @@
 .cv-logo{
   max-width: 250px;
 }
-.piece-of-shit{
+.upgrade-card{
   max-width: 480px;
 }
 
