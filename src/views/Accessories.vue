@@ -16,20 +16,8 @@
                         <v-flex xs6>
                             <img src="../assets/horiz-logo.png" alt="logo" class="zimm-logo" width="200px">
                         </v-flex>
-                        <v-flex xs6 hidden-xs-only class="py-4 text-xs-center" v-if="child.hahLogo">
-                            <img src="../assets/hah-logo.png" alt="logo" class="hah-logo" width="225px">
-                        </v-flex>
                         <v-flex>
                             <p class="basic-text grey--text text--darken-2" v-for="(para, index) in child.intro" :key="index">{{ para }}</p>
-                        </v-flex>
-                        <v-flex xs12 hidden-sm-and-up class="pt-3 text-xs-center" v-if="child.hahLogo">
-                            <img src="../assets/hah-logo.png" alt="logo" class="hah-logo" width="225px">
-                        </v-flex>
-                        <v-flex class="py-3 text-xs-center" v-if="child.video">
-                            <p class="basic-text grey--text text--darken-2 font-weight-bold">Watch a quick Hide-A-Hose demonstration!</p>
-                            <video width="100%" controls>
-                                <source src="../assets/hah.mp4" type="video/mp4">
-                            </video>
                         </v-flex>
                     </v-layout>
 

@@ -1,6 +1,6 @@
 <template>
     <div class="accessory-child accessory-child-bkgd" v-if="child">
-        <v-container>
+        <!-- <v-container>
 
             <v-layout row wrap>
                 <v-flex xs12>
@@ -70,7 +70,7 @@
 
             </div>
 
-        </v-container>
+        </v-container> -->
 
     </div>
 </template>

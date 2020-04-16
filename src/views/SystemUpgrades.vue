@@ -29,7 +29,46 @@
           </v-flex>
         </v-layout>
 
-      <v-layout row wrap class="mt-2">
+      <!-- Mobile Upgrades -->
+      <v-layout row wrap class="mt-2 hidden-sm-and-up">
+
+        <v-flex xs12 sm12 md6 class="my-1" v-for="(upgrade, index) in upgrades" :key="index">
+            <v-card flat color="transparent" class="upgrade-card pa-1 my-1">
+              <v-layout align-center justify-center row fill-height>
+                <v-flex xs6 sm6>
+                  <img
+                    :src="getPicUrl(upgrade.img)"
+                    width="100%"
+                    contain
+                  />
+                </v-flex>
+                <v-flex xs6 sm6 class="pa-0 pl-2" height="100%">
+                  <v-layout column justify-space-between fill-height>
+                    <div>
+                      <h2 class="grey--text text--darken-2">{{ upgrade.name }}</h2>
+                      <p class="card-text grey--text text--darken-2 mb-0">{{ upgrade.info }}</p>
+                    </div>
+                    <div class="mb-2">
+                      <a :href="upgrade.video" target="_blank">
+                        <v-btn color="primary" class="font-weight-bold ma-0 mt-3">
+                          <img class="mr-2" src="https://img.icons8.com/material/24/ffffff/youtube-play--v1.png"/>
+                          See the Video
+                        </v-btn>
+                      </a>
+                    </div>
+                    
+                  </v-layout>
+                </v-flex>
+                
+              </v-layout>
+            </v-card>
+          </v-flex>
+
+
+      </v-layout>
+
+      <!-- Desktop Upgrades -->
+      <v-layout row wrap class="mt-2 hidden-xs-only">
 
         <v-flex xs12 sm12 md6 class="my-1" v-for="(upgrade, index) in upgrades" :key="index">
             <v-card flat color="transparent" class="upgrade-card pa-1 my-1">
@@ -49,7 +88,7 @@
                     </div>
                     <div class="mb-2">
                       <a :href="upgrade.video" target="_blank">
-                        <v-btn color="primary font-weight-bold ma-0">
+                        <v-btn color="primary" class="font-weight-bold ma-0 mt-3">
                           <img class="mr-2" src="https://img.icons8.com/material/24/ffffff/youtube-play--v1.png"/>
                           See the Video
                         </v-btn>
@@ -63,9 +102,7 @@
             </v-card>
           </v-flex>
 
-        <v-flex>
 
-        </v-flex>
       </v-layout>
 
       </v-container>
@@ -209,6 +246,9 @@
   .card-text{
     font-size: 18px;
     font-weight: 500;
+  }
+  .upgrade-card{
+    max-width: 500px;
   }
 }
 </style>

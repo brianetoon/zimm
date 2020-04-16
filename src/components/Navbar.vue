@@ -12,7 +12,9 @@
             <v-spacer></v-spacer>
             
             <v-toolbar-title>
-                <img src="../assets/round-logo.png" height="75" width="75" />
+                <a href="/">
+                    <img src="../assets/round-logo.png" height="75" width="75" />
+                </a>
             </v-toolbar-title>
 
         </v-toolbar>
