@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home'
+import Commercial from './views/Commercial'
+import Residential from './views/Residential'
 import Installation from './views/Installation'
 import InstallChild from './views/InstallChild'
 import SystemUpgrades from './views/SystemUpgrades'
@@ -21,6 +23,16 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/commercial',
+      name: 'commercial',
+      component: Commercial
+    },
+    {
+      path: '/residential',
+      name: 'residential',
+      component: Residential
     },
     {
       path: '/installation',

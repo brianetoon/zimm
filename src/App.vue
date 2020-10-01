@@ -27,8 +27,72 @@ export default {
 </script>
 
 <style>
+/* General Styles */
 #app{
   font-family: freight-sans-pro, sans-serif;
   font-style: normal;
+}
+.banner{
+  height: 350px;
+}
+.banner-text{
+  font-size: 32px;
+}
+.sub-head{
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.sub-head-bold{
+  line-height: 1.2;
+}
+.point{
+  margin: 0;
+}
+
+/* Media Queries */
+
+/* Small Devices */
+@media screen and (min-width: 600px){
+  .banner{
+    height: 450px;
+  }
+  .banner-text{
+    font-size: 38px;
+  }
+}
+/* Medium Devices */
+@media screen and (min-width: 960px){
+  .banner{
+    height: 550px;
+  }
+  .banner-text{
+    font-size: 42px;
+  }
+  .body-bkgd{
+    background-image: url("./assets/blue-dots.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+/* Large Devices */
+@media screen and (min-width: 1264px){
+  .banner{
+    height: 700px;
+  }
+  .banner-text{
+    font-size: 55px;
+  }
+  .sub-head{
+    font-size: 40px;
+  }
+}
+/* Extra Large Devices */
+@media screen and (min-width: 1460px){
+  .banner{
+    height: 760px;
+  }
 }
 </style>

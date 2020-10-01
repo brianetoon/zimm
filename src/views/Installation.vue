@@ -126,12 +126,6 @@
   font-size: 18px;
   font-weight: 500;
 }
-.sub-head{
-  font-weight: 400;
-  font-size: 30px;
-  letter-spacing: -1px;
-  line-height: 1;
-}
 .point{
   margin: 0;
 }

@@ -33,13 +33,14 @@
       <v-layout row wrap class="mt-2 hidden-sm-and-up">
 
         <v-flex xs12 sm12 md6 class="my-1" v-for="(upgrade, index) in upgrades" :key="index">
-            <v-card flat color="transparent" class="upgrade-card pa-1 my-1">
-              <v-layout align-center justify-center row fill-height>
+            <v-card flat color="transparent" class="upgrade-card pa-1 my-2">
+              <v-layout align-start justify-center row fill-height>
                 <v-flex xs6 sm6>
                   <img
                     :src="getPicUrl(upgrade.img)"
                     width="100%"
                     contain
+                    class="mt-2"
                   />
                 </v-flex>
                 <v-flex xs6 sm6 class="pa-0 pl-2" height="100%">
@@ -80,7 +81,7 @@
                     contain
                   />
                 </v-flex>
-                <v-flex xs6 sm6 class="pa-0 pl-2" height="100%">
+                <v-flex xs6 sm6 class="pa-0 pl-3" height="100%">
                   <v-layout column justify-space-between fill-height>
                     <div>
                       <h2 class="grey--text text--darken-2">{{ upgrade.name }}</h2>

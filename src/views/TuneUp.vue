@@ -112,7 +112,7 @@
   }
 </script>
 
-<style>
+<style scoped>
 .tune-up-banner{
   background-image: url("../assets/tune-up-banner.png");
   background-position: center;

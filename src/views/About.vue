@@ -116,6 +116,7 @@
 .basic-text{
   font-size: 18px;
   font-weight: 500;
+  line-height: 1.3;
 }
 .about .sub-head{
   font-weight: 400;

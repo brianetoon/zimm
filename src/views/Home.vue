@@ -1,82 +1,65 @@
 <template>
-  <div class="home white">
-    <v-container fluid fill-height class="home-banner pa-0">
-      <v-container fill-height class="xs-home">
-        <v-layout row wrap align-content-space-between>
+  <div class="home">
+    <v-container fluid fill-height class="home-banner banner pa-0">
+      <v-container fill-height class="banner-content-container">
+      <v-layout align-end justify-start row fill-height>
         <v-flex xs6>
           <img class="logo" src="../assets/horiz-logo.png" alt="logo">
-        </v-flex>
-        <v-flex xs12 sm10>
-          <h2 class="font-weight-regular grey--text text--darken-2 banner-text">Discover central vacuum <br>for a cleaner, healthier home</h2>
         </v-flex>
       </v-layout>
       </v-container>
     </v-container>
 
-    <div class="home-bkgd">
+    <div class="body-bkgd">
       <v-container>
-
-        <!-- <v-layout row wrap>
-          <v-flex xs12>
-              <div class="py-3" v-for="(section, index) in intro" :key="index">
-                <h2 class="grey--text text--darken-2 font-weight-bold subhead" v-if="section.subhead">{{ section.subhead }}</h2>
-                <p class="basic-text grey--text text--darken-2 ma-0 pt-2" v-for="(point, index) in section.points" :key="index">
-                  {{ point }}
-                </p>
-              </div>
-          </v-flex>
-        </v-layout>
-
-        <v-layout row wrap>
-
-          <v-flex xs12 sm4 md4 class="pa-2" v-for="(card, index) in cards" :key="index">
-            <v-card hover class="text-center card-bkgd">
-              <img :src="getPicUrl(card.img)" width="100%">
-              <v-card-title class="white--text justify-center text-center title card-title pt-2">
-                {{ card.title }}
-              </v-card-title>
-            </v-card>
-          </v-flex>
-
-        </v-layout> -->
-
-        <v-layout row wrap>
-          
-          <v-flex xs12 md8>
-            <v-layout row wrap>
+            <v-layout row wrap class="pt-2">
               <v-flex xs12>
-                <div class="py-3" v-for="(section, index) in intro" :key="index">
-                  <h2 class="grey--text text--darken-2 font-weight-bold subhead" v-if="section.subhead">{{ section.subhead }}</h2>
-                  <p class="basic-text grey--text text--darken-2 ma-0 pt-2" v-for="(point, index) in section.points" :key="index">
-                    {{ point }}
+                <div class="">
+                  <h2 class="sub-head-bold text-uppercase grey--text text--darken-2">
+                    WHY CHOOSE ZIMM’S CENTRAL VACUUM FOR YOUR HOME?
+                  </h2>
+                  <p class="basic-text grey--text text--darken-2 ma-0 pt-2">
+                    Central vacuum systems clean with five times the power of traditional vacuum 
+                    cleaners, and are dust-free for a  healthier home. The equipment is lightweight 
+                    and easy to handle.  Zimm’s has more than 30 years experience in central vacuum, 
+                    and is a locally-owned, second-generation, family business. Zimm’s provides full 
+                    installation, service and replacement parts.
                   </p>
                 </div>
               </v-flex>
+            </v-layout>
 
-              <v-flex xs12>
-                <h2 class="font-weight-regular grey--text text--darken-2 banner-text py-4">
-                  Zimm’s - the best in central vacuum installation and service
-                </h2>
+            <v-layout row wrap class="py-3">
+              <v-flex xs6 xl5 class="featured-col">
+                <div class="featured">
+                  <h2 class="grey--text text--darken-2 featured-text">
+                    Zimm’s – Michigan’s largest Hide-A-Hose dealer 
+                  </h2>
+                  <p class="basic-text grey--text text--darken-2 ma-0 pt-2">
+                    4 out of 5 homeowners choose Hide-A-Hose fully-retractable hose systems for their homes.
+                  </p>
+                  <p class="link-text ma-0">
+                    LEARN MORE ABOUT HIDE-A-HOSE 
+                  </p>
+                </div>
+
+                <div class="featured">
+                  <h2 class="grey--text text--darken-2 featured-text">
+                    Trade in and save on an upgraded central vac system 
+                  </h2>
+                  <p class="basic-text grey--text text--darken-2 ma-0 pt-2">
+                    Save on a new power unit and installation.
+                  </p>
+                  <p class="link-text ma-0">
+                    LEARN HOW TO UPGRADE AND SAVE
+                  </p>
+                </div>
               </v-flex>
               
-            </v-layout>
-          </v-flex>
-
-          <v-flex xs12 md4 class="py-4">
-            <v-layout row wrap>
-              <v-flex xs12 sm4 md12 class="hidden-xs-only">
-                <img width="100%" src="../assets/pup.png" alt="pup">
-              </v-flex>
-              <v-flex xs12 sm4 md12 class="hidden-xs-only">
-                <img width="100%" src="../assets/ltweight.png" alt="vacuum">
-              </v-flex>
-              <v-flex xs12 sm4 md12>
-                <img width="100%" src="../assets/man-van.png" alt="van">
+              <v-flex xs6 class="text-xs-center lady-box pt-4">
+                <img src="../assets/new-lady-sweeps.png" class="lady" alt="logo" width="200px">
               </v-flex>
             </v-layout>
-          </v-flex>
-
-        </v-layout>
 
       </v-container>
     </div>
@@ -94,11 +77,9 @@
       }
     },
     created(){
-      // fetch data from the firestore
       db.collection('home').get()
       .then(snapshot =>{
         snapshot.forEach(doc => {
-          // console.log(doc.data(), doc.id)
           let page = doc.data()
           page.id = doc.id
           this.intro = page.intro
@@ -122,88 +103,90 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
-.banner-text{
-  letter-spacing: -1.5px;
-  line-height: 1;
+.logo{
+  width: 200px;
 }
-.home-bkgd{
-  background-image: url("../assets/blue-dots.png");
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.home .subhead{
+.link-text{
+  color: #0055a5;
+  font-weight: bold;
+  font-size: 18px;
   line-height: 1.2;
+  padding-top: 8px;
 }
+.featured{
+  padding: 20px 0;
+}
+.featured-text{
+  font-size: 23px;
+  line-height: 1;
+  font-weight: 500;
+}
+.lady{
+  width: 300px;
+}
+.banner-content-container{
+  padding-bottom: 0;
+}
+
 /* Media Queries */
 
-/* extra small devices */
-@media (max-width: 599px){
-  .home-banner{
-    height:350px;
+/* small devices */
+@media screen and (min-width: 600px){
+  .featured{
+    padding: 30px 0;
   }
-  .logo{
-    width: 150px;
-  }
-  .home .banner-text{
+  .featured-text{
     font-size: 30px;
   }
-  .body-text{
-    font-size: 28px;
-  }
-  .home-bkgd{
-    background-image: none;
-  }
-  .xs-home{
-    padding-bottom: 5px;
+  .lady{
+    width: 350px;
   }
 }
-/* small devices */
-@media (min-width: 600px) and (max-width: 959px){
-  .home-banner{
-    height: 450px;
-  }
-  .logo{
-    width: 200px;
-  }
-  .banner-text{
-    font-size: 38px;
-  }
-  .body-text{
-    font-size: 32px;
-  }
-  .home-bkgd{
-    background-image: none;
-  }
-}
-/* medium devices */
-@media (min-width: 960px) and (max-width: 1263px){
-  .home-banner{
-    height: 550px;
-  }
+/* Medium Devices */
+@media screen and (min-width: 960px){
   .logo{
     width: 250px;
   }
-  .banner-text{
-    font-size: 42px;
+  .featured-col{
+    padding-top: 25px;
   }
-  .body-text{
-    font-size: 30px;
+  .featured{
+    padding: 30px 0; 
+  }
+  .featured-text{
+    font-size: 36px;
+  }
+  .lady{
+    width: 400px;
   }
 }
-/* large devices */
-@media (min-width: 1264px){
+/* Large Devices */
+@media screen and (min-width: 1264px){
+  .featured-col{
+    padding-top: 50px;
+  }
+  .featured{
+    padding: 30px 0; 
+  }
+  .featured-text{
+    font-size: 36px;
+  }
+  .lady{
+    width: 500px;
+  }
+}
+/* Extra Large Devices */
+@media screen and (min-width: 1450px){
   .home-banner{
-    height: 700px;
+    height: 760px;
   }
-  .logo{
-    width: 275px;
+}
+@media screen and (min-width: 1904px){
+  .featured-text{
+    font-size: 48px;
   }
-  .banner-text{
-    font-size: 55px;
-  }
-  .body-text{
-    font-size: 55px;
+  .link-text{
+    font-size: 20px;
   }
 }
 </style>
