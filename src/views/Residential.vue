@@ -5,7 +5,7 @@
             <v-container fill-height>
                 <v-layout row wrap align-end fill-height>
                 <v-flex>
-                    <h2 class="font-weight-regular grey--text text--darken-2 banner-text">Discorver central vacuum <br> for a cleaner, healthier home</h2>
+                    <h2 class="font-weight-regular grey--text text--darken-2 banner-text">Discover central vacuum <br> for a cleaner, healthier home</h2>
                 </v-flex>
                 </v-layout>
             </v-container>

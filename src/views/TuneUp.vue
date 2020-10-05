@@ -11,7 +11,7 @@
       </v-container>
     </v-container>
 
-    <div class="tune-up-bkgd">
+    <div class="body-bkgd">
 
       <v-container>
 
@@ -23,7 +23,7 @@
 
         <v-layout row wrap>
 
-          <v-flex xs12 sm6 md8>
+          <v-flex xs12 sm7 md8>
             <img src="../assets/horiz-logo.png" alt="logo" width="200px">
             <h2 class="special-headline primary--text pb-4">We service ALL <br>makes and models.</h2>
             <p class="basic-text grey--text text--darken-2" v-for="(para, index) in intro1" :key="index">
@@ -42,15 +42,25 @@
             </div>
           </v-flex>
 
-          <v-flex xs12 sm6 md4 class="right-col">
+          <v-flex xs12 sm5 md4 class="right-col">
 
             <div class="pb-3">
-              <h2 class="grey--text text--darken-2">BRANDS WE SERVICE INCLUDE</h2>
-              <p class="basic-text grey--text text--darken-2 ma-0" v-for="(brand, index) in brands" :key="index">
-                {{ brand }}
-              </p>
+              <h2 class="sub-head-bold grey--text text--darken-2 pb-2">BRANDS WE SERVICE INCLUDE</h2>
+              <v-layout row>
+                <v-flex xs6>
+                  <p class="basic-text grey--text text--darken-2 ma-0" v-for="(brand, index) in brands" :key="index">
+                    {{ brand }}
+                  </p>
+                </v-flex>
+                <v-flex xs6>
+                  <p class="basic-text grey--text text--darken-2 ma-0" v-for="(brand, index) in brands2" :key="index">
+                    {{ brand }}
+                  </p>
+                </v-flex>
+              </v-layout>
+
             </div>
-            
+
             <div v-for="type in types" :key="type.title" class="py-4">
               <v-card hover class="text-center card-bkgd" router :to="{ name: 'tune-up-child', params: { tuneup_slug: type.slug }}">
                 <img :src="getPicUrl(type.img)" width="100%">
@@ -62,6 +72,17 @@
                 </v-card-text>
               </v-card>
             </div>
+
+            <v-card hover class="text-center card-bkgd" router :to="{ name: 'trade-in'}">
+              <img src="../assets/new-unit-pic.png" alt="vac unit" width="100%">
+              <v-card-title class="white--text justify-center title card-title pt-2 pb-0">
+                Trade up to a new unit!
+              </v-card-title>
+              <v-card-text class="pa-0 text-xs-center">
+                <p class="white--text basic-text pb-2">click to see more</p>
+              </v-card-text>
+            </v-card>
+
           </v-flex>
 
         </v-layout>
@@ -84,11 +105,11 @@
         intro2: [],
         repairs: [],
         brands: [],
+        brands2: [],
         types: []
       }
     },
     created(){
-      // fetch data from the firestore
       db.collection('tuneup').get()
       .then(snapshot =>{
         snapshot.forEach(doc => {
@@ -99,6 +120,7 @@
           this.intro2 = tuneup.intro2
           this.repairs = tuneup.repairs
           this.brands = tuneup.brands
+          this.brands2 = tuneup.brands2
           this.types = tuneup.types
         })
       })
@@ -114,7 +136,7 @@
 
 <style scoped>
 .tune-up-banner{
-  background-image: url("../assets/tune-up-banner.png");
+  background-image: url("../assets/banners/tune-up-banner.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -129,11 +151,8 @@
   line-height: 1;
   font-weight: 600;
 }
-.tune-up-bkgd{
-  background-image: url("../assets/blue-dots.png");
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
+.v-card{
+  max-width: 400px;
 }
 .card-bkgd{
   background-image: url("../assets/card-bkgd.png");

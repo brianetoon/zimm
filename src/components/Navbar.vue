@@ -4,9 +4,13 @@
         <v-toolbar flat dark id="main-nav" height="100" class="">
             <v-toolbar-side-icon large @click="drawer = !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
             <v-toolbar-items class="hidden-sm-and-down">
+
                 <v-btn flat v-for="link in links" :key="link.name" router :to="link.route">
                     <span class="text font-weight-bold">{{ link.name }}</span>
                 </v-btn>
+
+                <Menu />
+
             </v-toolbar-items>
 
             <v-spacer></v-spacer>
@@ -37,6 +41,16 @@
                         </v-list-tile-title>
                     </v-list-tile-content>
                 </v-list-tile>
+
+                <v-list-tile>
+                    <v-list-tile-action>
+                        <v-icon class="white--text">format_list_bulleted</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                        <Menu />
+                    </v-list-tile-content>
+                </v-list-tile>
+
             </v-list>
         </v-navigation-drawer>
 
@@ -44,16 +58,24 @@
 </template>
 
 <script>
+import Menu from './Menu'
+
 export default {
+    components: { Menu },
     data(){
         return{
             links: [
-                { name: 'home', icon: 'home', route: '/'},
-                { name: 'commercial', icon: 'settings', route: '/commercial'},
-                { name: 'residential', icon: 'list', route: '/residential'},
-                { name: 'accessories', icon: 'toys', route: '/accessories'},
-                { name: 'tune up & repair', icon: 'build', route: '/tune-up-and-repair'},
+                { name: 'home', icon: 'dashboard', route: '/'},
+                { name: 'commercial', icon: 'store_mall_directory', route: '/commercial'},
+                { name: 'residential', icon: 'house', route: '/residential'},
+                // { name: 'accessories', icon: 'toys', route: '/accessories'},
+                { name: 'tune up & repair', icon: 'handyman', route: '/tune-up-and-repair'},
                 { name: 'about', icon: 'info', route: '/about'},
+            ],
+            menuLinks: [
+                { name:'trade in', route:'/trade-in'},
+                { name:'system upgrades', route:'/system-upgrades'},
+                { name:'accessories', route:'/accessories'}
             ],
             drawer: false,
         }
@@ -75,11 +97,11 @@ nav{
 .v-icon{
     font-size: 35px;
 }
+
 /* medium devices and up */
 @media screen and (min-width: 960px){
     .text{
         font-size: 16px;
-        font-weight: 500;
     }
     #main-nav{
         max-width: 942px;

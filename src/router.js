@@ -6,6 +6,7 @@ import Residential from './views/Residential'
 import Installation from './views/Installation'
 import InstallChild from './views/InstallChild'
 import SystemUpgrades from './views/SystemUpgrades'
+import TradeIn from './views/TradeIn'
 // import SystemsChild from './views/SystemsChild'
 import Accessories from './views/Accessories'
 // import AccessoryChild from './views/AccessoryChild'
@@ -48,6 +49,11 @@ export default new Router({
       path: '/system-upgrades',
       name: 'system-upgrades',
       component: SystemUpgrades
+    },
+    {
+      path: '/trade-in',
+      name: 'trade-in',
+      component: TradeIn
     },
     // {
     //   path: '/systems/:systems_slug',

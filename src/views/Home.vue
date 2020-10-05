@@ -18,42 +18,53 @@
                   <h2 class="sub-head-bold text-uppercase grey--text text--darken-2">
                     WHY CHOOSE ZIMM’S CENTRAL VACUUM FOR YOUR HOME?
                   </h2>
-                  <p class="basic-text grey--text text--darken-2 ma-0 pt-2">
-                    Central vacuum systems clean with five times the power of traditional vacuum 
-                    cleaners, and are dust-free for a  healthier home. The equipment is lightweight 
-                    and easy to handle.  Zimm’s has more than 30 years experience in central vacuum, 
-                    and is a locally-owned, second-generation, family business. Zimm’s provides full 
-                    installation, service and replacement parts.
+                  <p class="basic-text grey--text text--darken-2 ma-0 pt-2" v-for="(para, index) in intro" :key="index">
+                    {{ para }}
                   </p>
                 </div>
               </v-flex>
             </v-layout>
 
             <v-layout row wrap class="py-3">
+              
               <v-flex xs6 xl5 class="featured-col">
+
+                <!-- <div class="featured" v-for="(item, index) in featured" :key="index">
+                  <h2 class="grey--text text--darken-2 featured-text">
+                    {{ item.title }}
+                  </h2>
+                  <p class="basic-text grey--text text--darken-2 ma-0 pt-2">
+                    {{ item.info }}
+                  </p>
+                  <v-btn class="featured-link ma-0" router :to="{ name: item.url }">
+                    {{ item.link }}
+                  </v-btn>
+                </div> -->
+                
                 <div class="featured">
                   <h2 class="grey--text text--darken-2 featured-text">
                     Zimm’s – Michigan’s largest Hide-A-Hose dealer 
                   </h2>
-                  <p class="basic-text grey--text text--darken-2 ma-0 pt-2">
+                  <p class="basic-text grey--text text--darken-2 ma-0 py-2">
                     4 out of 5 homeowners choose Hide-A-Hose fully-retractable hose systems for their homes.
                   </p>
-                  <p class="link-text ma-0">
+                  <router-link flat class="featured-link" router :to="{ name: 'system-upgrades'}">
                     LEARN MORE ABOUT HIDE-A-HOSE 
-                  </p>
+                  </router-link>
                 </div>
 
                 <div class="featured">
                   <h2 class="grey--text text--darken-2 featured-text">
                     Trade in and save on an upgraded central vac system 
                   </h2>
-                  <p class="basic-text grey--text text--darken-2 ma-0 pt-2">
+                  <p class="basic-text grey--text text--darken-2 ma-0 py-2">
                     Save on a new power unit and installation.
                   </p>
-                  <p class="link-text ma-0">
+                  <router-link flat class="featured-link" router :to="{ name: 'trade-in'}">
                     LEARN HOW TO UPGRADE AND SAVE
-                  </p>
+                  </router-link>
                 </div>
+
               </v-flex>
               
               <v-flex xs6 class="text-xs-center lady-box pt-4">
@@ -73,7 +84,7 @@
     data(){
       return{
         intro: [],
-        cards: []
+        featured: []
       }
     },
     created(){
@@ -83,7 +94,7 @@
           let page = doc.data()
           page.id = doc.id
           this.intro = page.intro
-          this.cards = page.cards
+          this.featured = page.featured
         })
       })
     },
@@ -98,7 +109,7 @@
 
 <style scoped>
 .home-banner{
-  background-image: url("../assets/home-banner.png");
+  background-image: url("../assets/banners/home-banner.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -106,12 +117,12 @@
 .logo{
   width: 200px;
 }
-.link-text{
+.featured-link{
   color: #0055a5;
   font-weight: bold;
   font-size: 18px;
   line-height: 1.2;
-  padding-top: 8px;
+  text-decoration: none;
 }
 .featured{
   padding: 20px 0;

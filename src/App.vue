@@ -50,6 +50,12 @@ export default {
 .point{
   margin: 0;
 }
+.body-bkgd{
+  background: white;
+}
+.v-breadcrumbs{
+  padding-top: 0;
+}
 
 /* Media Queries */
 

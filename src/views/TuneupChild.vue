@@ -1,7 +1,7 @@
 <template>
     <div class="tune-up-child" v-if="child">
 
-        <v-container fluid fill-height class="tune-up-child-banner" :style="{ backgroundImage: 'url('+ getPicUrl(child.banner) +')'}">
+        <v-container fluid fill-height class="banner tune-up-child-banner" :style="{ backgroundImage: 'url('+ getPicUrl(child.banner) +')'}">
             <v-container fill-height>
                 <v-layout row wrap align-end fill-height>
                     <v-flex>
@@ -14,7 +14,7 @@
             </v-container>
         </v-container>
 
-        <div class="tune-up-child-bkgd">
+        <div class="body-bkgd">
 
             <v-container>
 
@@ -79,16 +79,6 @@ export default {
   background-repeat: no-repeat;
   padding: 0;
 }
-.banner-text{
-  letter-spacing: -1.5px;
-  line-height: 1;
-}
-.tune-up-child-bkgd{
-  background-image: url("../assets/blue-dots.png");
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 .basic-text{
   font-size: 18px;
   font-weight: 500;
@@ -96,53 +86,20 @@ export default {
 
 /* Media Queries */
 
-/* extra small devices */
-@media (max-width: 599px){
-  .tune-up-child-banner{
-    height:350px;
-  }
-  .banner-text{
-    font-size: 32px;
-  }
-  .tune-up-child-bkgd{
-    background-image: none;
-  }
-}
 /* small devices */
 @media (min-width: 600px) and (max-width: 959px){
-  .tune-up-child-banner{
-    height: 450px;
-  }
-  .banner-text{
-    font-size: 38px;
-  }
-  .tune-up-child-bkgd{
-    background-image: none;
-  }
   .tune-up-child .right-col{
     padding-left: 30px;
   }
 }
 /* medium devices */
 @media (min-width: 960px) and (max-width: 1263px){
-  .tune-up-child-banner{
-    height: 550px;
-  }
-  .banner-text{
-    font-size: 42px;
-  }
   .tune-up-child .right-col{
     padding-left: 40px;
   }
 }
 /* large devices */
 @media (min-width: 1264px){
-  .tune-up-child-banner{
-    height: 700px;
-  }
-  .banner-text{
-    font-size: 55px;
-  }
   .tune-up-child .right-col{
     padding-left: 50px;
   }

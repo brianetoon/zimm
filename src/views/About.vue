@@ -11,7 +11,7 @@
       </v-container>
     </v-container>
 
-    <div class="about-bkgd">
+    <div class="body-bkgd">
 
       <v-container>
 
@@ -97,7 +97,7 @@
 
 <style>
 .about-banner{
-  background-image: url("../assets/about-banner.png");
+  background-image: url("../assets/banners/about-banner.png");
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
@@ -106,12 +106,6 @@
 .banner-text{
   letter-spacing: -1.5px;
   line-height: 1;
-}
-.about-bkgd{
-  background-image: url("../assets/blue-dots.png");
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 .basic-text{
   font-size: 18px;
