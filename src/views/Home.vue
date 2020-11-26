@@ -14,7 +14,7 @@
       <v-container>
             <v-layout row wrap class="pt-2">
               <v-flex xs12>
-                <div class="">
+                <div class="home-intro">
                   <h2 class="sub-head-bold text-uppercase grey--text text--darken-2">
                     WHY CHOOSE ZIMM’S CENTRAL VACUUM FOR YOUR HOME?
                   </h2>
@@ -114,6 +114,9 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+div.home{
+  overflow: hidden;
+}
 .logo{
   width: 200px;
 }
@@ -170,6 +173,9 @@
   .lady{
     width: 400px;
   }
+  .featured-link{
+    font-size: 24px;
+  }
 }
 /* Large Devices */
 @media screen and (min-width: 1264px){
@@ -190,14 +196,6 @@
 @media screen and (min-width: 1450px){
   .home-banner{
     height: 760px;
-  }
-}
-@media screen and (min-width: 1904px){
-  .featured-text{
-    font-size: 48px;
-  }
-  .link-text{
-    font-size: 20px;
   }
 }
 </style>

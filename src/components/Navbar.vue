@@ -97,6 +97,10 @@ nav{
 .v-icon{
     font-size: 35px;
 }
+#main-nav > div{
+
+}
+
 
 /* medium devices and up */
 @media screen and (min-width: 960px){

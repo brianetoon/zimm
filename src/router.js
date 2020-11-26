@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import Home from './views/Home'
 import Commercial from './views/Commercial'
 import Residential from './views/Residential'
-import Installation from './views/Installation'
-import InstallChild from './views/InstallChild'
+// import Installation from './views/Installation'
+// import InstallChild from './views/InstallChild'
 import SystemUpgrades from './views/SystemUpgrades'
 import TradeIn from './views/TradeIn'
 // import SystemsChild from './views/SystemsChild'
@@ -35,16 +35,16 @@ export default new Router({
       name: 'residential',
       component: Residential
     },
-    {
-      path: '/installation',
-      name: 'installation',
-      component: Installation
-    },
-    {
-      path: '/installation/:install_slug',
-      name: 'install-child',
-      component: InstallChild
-    },
+    // {
+    //   path: '/installation',
+    //   name: 'installation',
+    //   component: Installation
+    // },
+    // {
+    //   path: '/installation/:install_slug',
+    //   name: 'install-child',
+    //   component: InstallChild
+    // },
     {
       path: '/system-upgrades',
       name: 'system-upgrades',

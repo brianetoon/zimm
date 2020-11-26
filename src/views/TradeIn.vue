@@ -21,10 +21,10 @@
                 </v-layout>
 
                 <v-layout row wrap>
-                    <v-flex xs12 md4 lg3 xl2>
+                    <v-flex xs12 md4 lg3>
                         <img src="../assets/horiz-logo.png" alt="logo" width="200px">
                     </v-flex>
-                    <v-flex xs12 md8 lg9 xl10>
+                    <v-flex xs12 md8 lg9>
                         <h2 class="sub-head grey--text text--darken-2 pb-3">
                             Trade In - Trade Up
                         </h2>
@@ -41,12 +41,33 @@
                                 <h3 class="price plus-sign">+</h3>
                             </div>
                             <div class="promo">
-                                <h3 class="price">$95 VALUE</h3>
-                                <p class="promo-text grey--text text--darken-2 mb-0">Free installation</p>
+                                <h3 class="price">$125 VALUE</h3>
+                                <p class="promo-text grey--text text--darken-2 mb-0">Free installation of a new unit</p>
                             </div>
                         </div>
                         
                     </v-flex>
+                </v-layout>
+
+                <v-layout align-center class="py-5">
+                    <v-flex xs6 sm7 class="filter-promo">
+                        <p class="grey-sub grey--text text--darken-2">
+                            Tired of emptying the dirty canister and cleaning the filter?
+                        </p>
+                        <p class="blue-sub">
+                            TRADE IN YOUR OLD CENTRAL VAC UNIT!
+                        </p>
+                        <p class="grey-sub grey--text text--darken-2">
+                            Enjoy the convenience of a disposable bag. NO fuss, NO mess, NO tune-up needed!
+                        </p>
+                        <p class="grey-sub grey--text text--darken-2">
+                            Get all the cleaning and health benefits that your central vacuum offers.
+                        </p>
+                        <p class="blue-sub">
+                            LIMITED TIME OFFER<br class="break"> Call now! 866-829-0021
+                        </p>
+                    </v-flex>
+                    <v-flex xs6 sm5 class="zimm-filter-wrapper"><img src="../assets/zimm-filter.png" alt="filter" class="zimm-filter"></v-flex>
                 </v-layout>
 
                 <v-layout align-end justify-center row wrap fill-height class="unit-row">
@@ -121,7 +142,7 @@ export default {
 .price{
     color: #0055a5;
     font-weight: bold;
-    font-size: 34px;
+    font-size: 32px;
     line-height: 36px;
 }
 .promo{
@@ -134,10 +155,29 @@ export default {
 }
 .promo-text{
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
 }
 .plus-sign{
-    padding-right: 20px;
+    padding-right: 5px;
+}
+.zimm-filter-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.zimm-filter{
+    width: 100%;
+    max-width: 350px;
+}
+.blue-sub{
+    color: #0055a5;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.2;
+}
+.grey-sub{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3em;
 }
 .unit-card{
     max-width: 360px;
@@ -180,6 +220,19 @@ export default {
         font-size: 40px;
         line-height: 40px;
     }
+    .promo-text{
+        font-size: 16px;
+    }
+    .plus-sign{
+        padding-right: 20px;
+    }
+    .filter-promo p{
+        font-size: 23px;
+        margin-bottom: 30px;
+    }
+    .filter-promo p:nth-child(2){
+        margin-bottom: 5px;
+    }
 }
 /* Medium Devices and up */
 @media screen and (min-width: 960px){
@@ -188,6 +241,24 @@ export default {
     }
     .unit-name{
         font-size: 20px;
+    }
+    .filter-promo p{
+        font-weight: 400;
+        letter-spacing: -1px;
+        line-height: 1.1em;
+        font-size: 28px;
+    }
+    p.blue-sub{
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .filter-promo p{
+        margin-bottom: 40px;
+    }
+    .break{
+        /* display: none; */
     }
 }
 </style>

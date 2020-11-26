@@ -1,5 +1,5 @@
 <template>
-    <div class="accessory-child accessory-child-bkgd" v-if="child">
+    <div class="accessory-child" v-if="child">
         <v-container>
 
             <v-layout row wrap>

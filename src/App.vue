@@ -31,6 +31,7 @@ export default {
 #app{
   font-family: freight-sans-pro, sans-serif;
   font-style: normal;
+  background: #fff;
 }
 .banner{
   height: 350px;
@@ -47,6 +48,10 @@ export default {
 .sub-head-bold{
   line-height: 1.2;
 }
+.basic-text{
+  font-size: 18px;
+  font-weight: 500;
+}
 .point{
   margin: 0;
 }
@@ -56,6 +61,7 @@ export default {
 .v-breadcrumbs{
   padding-top: 0;
 }
+
 
 /* Media Queries */
 
@@ -78,8 +84,8 @@ export default {
   }
   .body-bkgd{
     background-image: url("./assets/blue-dots.png");
-    background-position: top;
-    background-size: cover;
+    background-position: center;
+    background-size: 1200px;
     background-repeat: no-repeat;
   }
 }
@@ -99,6 +105,12 @@ export default {
 @media screen and (min-width: 1460px){
   .banner{
     height: 760px;
+  }
+  div.container div.container{
+    max-width: 1185px;
+  }
+div.body-bkgd div.container{
+    max-width: 1185px;
   }
 }
 </style>

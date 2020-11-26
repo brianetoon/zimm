@@ -122,10 +122,6 @@
   font-weight: 500;
   font-size: 24px !important;
 }
-.basic-text{
-  font-size: 18px;
-  font-weight: 500;
-}
 .point{
   margin: 0;
 }
