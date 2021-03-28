@@ -5,7 +5,9 @@
             <v-layout row wrap>
                 <v-flex xs12>
                     <v-breadcrumbs :items="child.items" divider="/" large class="font-weight-bold px-0"></v-breadcrumbs>
-                    <h2 class="font-weight-regular grey--text text--darken-2 banner-text">{{ child.title }}</h2>
+                    <h2 class="font-weight-regular grey--text text--darken-2 banner-text">
+                        Shop cleaning kits and replacement parts
+                    </h2>
                 </v-flex>
             </v-layout>
 
@@ -16,8 +18,9 @@
                         <v-flex xs6>
                             <img src="../assets/horiz-logo.png" alt="logo" class="zimm-logo" width="200px">
                         </v-flex>
-                        <v-flex>
-                            <p class="basic-text grey--text text--darken-2" v-for="(para, index) in child.intro" :key="index">{{ para }}</p>
+                        <v-flex class="accessories-info">
+                            <p class="basic-text grey--text text--darken-2" 
+                            v-for="(para, index) in intro" :key="index">{{ para }}</p>
                         </v-flex>
                     </v-layout>
 
@@ -35,45 +38,43 @@
                     </v-layout>
                 
                 </v-flex>
-
             </v-layout>
 
-            <div v-if="child.products">
+            <v-layout row wrap class="py-4" v-for="(part, index) in parts" :key="index">
+                <v-flex xs12>
+                    <h2 class="product-subhead text-uppercase">{{ part.type }}</h2>
+                </v-flex>
+                <v-flex xs6 sm6 md4 lg3 v-for="(p, index) in part.gallery" :key="index" >
+                    <v-card flat class="transparent py-2">
+                        <img :src="require(`@/assets/accessories/${p.img}`)" width="100%">
+                        <v-card-text class="py-0">
+                            <p v-for="(text, index) in p.info" :key="index" class="price-info ma-0">
+                                {{ text }}
+                            </p>
+                            <p class="font-italic price-info ma-0">{{ p.ital }}</p>
+                        </v-card-text>
+                    </v-card>
+                </v-flex>
+            </v-layout>
                 
-                <v-layout row wrap class="py-4" v-for="(product, index) in child.products" :key="index">
-                    <v-flex xs12>
-                        <h2 class="product-subhead">{{ product.type }}</h2>
-                    </v-flex>
-                    <v-flex xs6 sm6 md4 lg3 v-for="(item, index) in product.items" :key="index">
-                        <v-card flat class="transparent py-2">
-                            <img :src="getPicUrl(item.img)" width="100%">
-                            <v-card-text class="py-0">
-                                <p class="price-info ma-0">{{ item.text }}</p>
-                                <p class="price-info ma-0" v-if="item.text2">{{ item.text2}}</p>
-                            </v-card-text>
-                        </v-card>
-                    </v-flex>
-
-                </v-layout>
-
-            </div>
-
         </v-container>
 
     </div>
 </template>
 
 <script>
+import store from '@/store.js'
 import db from '@/fb'
 export default {
     data(){
         return{
-            child: null
+            child: null,
+            intro: store.accessories.intro,
+            parts: store.accessories.parts
         }
     },
     created(){
         let ref = db.collection('accessoryChildren')
-        // .where('slug', '==', this.$route.params.accessory_slug)
         .where('slug', '==', 'shop-accessories')
         ref.get().then(snapshot =>{
             snapshot.forEach(doc => {
@@ -109,6 +110,10 @@ export default {
     color: #0055a5;
     font-weight: 500;
     font-size: 16px;
+    font-family: myriad-pro, sans-serif;
+}
+.accessories-info p:last-child {
+    font-style: italic;
 }
 
 /* Media Queries */

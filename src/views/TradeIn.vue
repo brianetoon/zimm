@@ -32,7 +32,7 @@
                             {{ para }}
                         </p>
 
-                        <div class="promo-group pb-4">
+                        <div class="promo-group pb-1">
                             <div class="promo">
                                 <h3 class="price">$100 OFF</h3>
                                 <p class="promo-text grey--text text--darken-2 mb-0">The purchase of a new unit</p>
@@ -45,30 +45,16 @@
                                 <p class="promo-text grey--text text--darken-2 mb-0">Free installation of a new unit</p>
                             </div>
                         </div>
+
+
+                        <h3 class="price savings text-center pb-4">$225 TOTAL SAVINGS</h3>
+
+
                         
                     </v-flex>
                 </v-layout>
 
-                <v-layout align-center class="py-5">
-                    <v-flex xs6 sm7 class="filter-promo">
-                        <p class="grey-sub grey--text text--darken-2">
-                            Tired of emptying the dirty canister and cleaning the filter?
-                        </p>
-                        <p class="blue-sub">
-                            TRADE IN YOUR OLD CENTRAL VAC UNIT!
-                        </p>
-                        <p class="grey-sub grey--text text--darken-2">
-                            Enjoy the convenience of a disposable bag. NO fuss, NO mess, NO tune-up needed!
-                        </p>
-                        <p class="grey-sub grey--text text--darken-2">
-                            Get all the cleaning and health benefits that your central vacuum offers.
-                        </p>
-                        <p class="blue-sub">
-                            LIMITED TIME OFFER<br class="break"> Call now! 866-829-0021
-                        </p>
-                    </v-flex>
-                    <v-flex xs6 sm5 class="zimm-filter-wrapper"><img src="../assets/zimm-filter.png" alt="filter" class="zimm-filter"></v-flex>
-                </v-layout>
+                <Promo class="py-4"/>
 
                 <v-layout align-end justify-center row wrap fill-height class="unit-row">
                     <v-flex xs12 sm6 md4 v-for="(unit, index) in units" :key="index">
@@ -103,8 +89,10 @@
 
 <script>
 import db from '@/fb'
+import Promo from '@/components/Promo.vue'
 
 export default {
+    components: { Promo },
     data(){
         return {
             intro: [],
@@ -144,6 +132,10 @@ export default {
     font-weight: bold;
     font-size: 32px;
     line-height: 36px;
+    font-family: myriad-pro, sans-serif;
+}
+.unit-price {
+    font-family: myriad-pro, sans-serif;
 }
 .promo{
     display: inline-block;
@@ -160,11 +152,7 @@ export default {
 .plus-sign{
     padding-right: 5px;
 }
-.zimm-filter-wrapper{
-    display: flex;
-    justify-content: center;
-}
-.zimm-filter{
+.zimm-filter {
     width: 100%;
     max-width: 350px;
 }
@@ -211,6 +199,9 @@ export default {
     font-size: 24px;
     line-height: 1.2em;
 }
+h3.savings {
+    text-align: center;
+}
 
 /* Media Queries */
 
@@ -251,14 +242,15 @@ export default {
     p.blue-sub{
         font-weight: bold;
     }
+    h3.savings {
+        text-align: left;
+        padding-left: 50px;
+    }
 }
 
 @media screen and (min-width: 1200px){
     .filter-promo p{
         margin-bottom: 40px;
-    }
-    .break{
-        /* display: none; */
     }
 }
 </style>
