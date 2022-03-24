@@ -41,13 +41,13 @@
                                 <h3 class="price plus-sign">+</h3>
                             </div>
                             <div class="promo">
-                                <h3 class="price">$125 VALUE</h3>
-                                <p class="promo-text grey--text text--darken-2 mb-0">Free installation of a new unit</p>
+                                <h3 class="price">$62.50 OFF</h3>
+                                <p class="promo-text grey--text text--darken-2 mb-0">50% off $130 installation</p>
                             </div>
                         </div>
 
 
-                        <h3 class="price savings text-center pb-4">$225 TOTAL SAVINGS</h3>
+                        <h3 class="price savings text-center pb-4">$165 TOTAL SAVINGS</h3>
 
 
                         
@@ -133,17 +133,18 @@ export default {
     font-size: 32px;
     line-height: 36px;
     font-family: myriad-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 .unit-price {
     font-family: myriad-pro, sans-serif;
 }
-.promo{
-    display: inline-block;
-}
 .promo-group{
     display: flex;
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
+    max-width: 420px;
+    margin: 0 auto;
 }
 .promo-text{
     font-weight: bold;
@@ -180,7 +181,7 @@ export default {
 .unit-pricing{
     max-width: 300px;
 }
-.unit-price-line:nth-of-type(3){
+.unit-price-line:nth-of-type(4){
     border-bottom: 2px solid #616161;
     padding-bottom: 5px;
     margin-bottom: 5px;
@@ -201,7 +202,10 @@ export default {
 }
 h3.savings {
     text-align: center;
+    margin: 0 auto;
+    display: block;
 }
+
 
 /* Media Queries */
 
@@ -214,8 +218,8 @@ h3.savings {
     .promo-text{
         font-size: 16px;
     }
-    .plus-sign{
-        padding-right: 20px;
+    .promo-group {
+        max-width: 500px;
     }
     .filter-promo p{
         font-size: 23px;
@@ -227,9 +231,6 @@ h3.savings {
 }
 /* Medium Devices and up */
 @media screen and (min-width: 960px){
-    .promo-group{
-        justify-content: start;
-    }
     .unit-name{
         font-size: 20px;
     }
@@ -241,10 +242,6 @@ h3.savings {
     }
     p.blue-sub{
         font-weight: bold;
-    }
-    h3.savings {
-        text-align: left;
-        padding-left: 50px;
     }
 }
 

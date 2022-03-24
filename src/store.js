@@ -72,7 +72,7 @@ export default {
                     },
                     { 
                         img: "et5.png",
-                        info: ["Turbo Cat Power Head $143.00"]
+                        info: ["Turbo Cat Power Head $149.95"]
                     },
                     { 
                         img: "et6.png",
@@ -102,7 +102,7 @@ export default {
                     },
                     { 
                         img: "pt5.png",
-                        info: ["Turbo Cat Zoom $145.00"]
+                        info: ["Turbo Cat Zoom $169.95"]
                     },
                     { 
                         img: "pt6.png",
@@ -114,7 +114,7 @@ export default {
                     },
                     { 
                         img: "pt8.png",
-                        info: ["Adjustable Wand $30.00"]
+                        info: ["Adjustable Wand $29.95"]
                     },
                     { 
                         img: "pt9.png",
@@ -127,24 +127,24 @@ export default {
                 gallery: [
                     { 
                         img: "st1.png",
-                        info: ["Microfiber Dust Mop $28.00"]
+                        info: ["Microfiber Dust Mop $27.95"]
                     },
                     { 
                         img: "st2.png",
-                        info: ["Microfiber Dust Mop Replacement Head $14.00"]
+                        info: ["Microfiber Dust Mop Replacement Head $14.95"]
                     },
                     { 
                         img: "st3.png",
-                        info: ["RugRat $63.00"]
+                        info: ["RugRat $67.95"]
                     },
                     { 
                         img: "st4.png",
-                        info: ["Turbine Bumper $36.70"],
+                        info: ["Turbine Bumper $35.95"],
                         ital: "Wraps around power nozzles to protect moulding"
                     },
                     { 
                         img: "st5.png",
-                        info: ["Pet Brush $21.00"]
+                        info: ["Pet Brush $19.95"]
                     }
                 ]
             }
