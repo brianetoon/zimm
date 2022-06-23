@@ -136,7 +136,7 @@
 
 <style scoped>
 .tune-up-banner{
-  background-image: url("../assets/banners/tune-up-banner.png");
+  background-image: url("../assets/banners/tune-up-banner.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

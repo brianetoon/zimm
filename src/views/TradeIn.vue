@@ -41,15 +41,12 @@
                                 <h3 class="price plus-sign">+</h3>
                             </div>
                             <div class="promo">
-                                <h3 class="price">$62.50 OFF</h3>
+                                <h3 class="price">$65 OFF</h3>
                                 <p class="promo-text grey--text text--darken-2 mb-0">50% off $130 installation</p>
                             </div>
                         </div>
 
-
                         <h3 class="price savings text-center pb-4">$165 TOTAL SAVINGS</h3>
-
-
                         
                     </v-flex>
                 </v-layout>
@@ -122,7 +119,7 @@ export default {
 
 <style scoped>
 .trade-in-banner{
-    background-image: url("../assets/banners/trade-in-banner.png");
+    background-image: url("../assets/banners/trade-in-banner.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

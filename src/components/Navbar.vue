@@ -17,7 +17,7 @@
             
             <v-toolbar-title>
                 <a href="/">
-                    <img src="../assets/round-logo.png" height="75" width="75" />
+                    <img src="../assets/round-logo.png" height="75" width="75" alt="logo" />
                 </a>
             </v-toolbar-title>
         </v-toolbar>
@@ -26,7 +26,7 @@
 
             <v-layout column align-center>
                 <v-flex class="mt-5">
-                    <img src="/round-logo.png" alt="round-logo">
+                    <img src="/round-logo.png" alt="logo">
                 </v-flex>
             </v-layout>
 

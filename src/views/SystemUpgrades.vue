@@ -110,7 +110,7 @@
 
 <style>
 .system-upgrades-banner{
-  background-image: url("../assets/system-upgrades-banner.png");
+  background-image: url("../assets/banners/system-upgrades-banner.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

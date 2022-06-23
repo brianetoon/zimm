@@ -26,7 +26,7 @@
                     <span  class="text white--text font-weight-bold pl-4 hidden-sm-and-down">Learn more about Zimm’s Central Vacuum Systems</span>
                 </v-flex>
                 <v-flex xs3 sm2 md1 class="logo">
-                    <img src="../assets/round-logo.png" height="75" width="75" />
+                    <img src="../assets/round-logo.png" alt="logo" height="75" width="75" />
                 </v-flex>
             </v-layout>
         </v-container>

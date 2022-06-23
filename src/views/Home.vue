@@ -28,18 +28,6 @@
             <v-layout row wrap class="py-3">
               
               <v-flex xs6 xl5 class="featured-col">
-
-                <!-- <div class="featured" v-for="(item, index) in featured" :key="index">
-                  <h2 class="grey--text text--darken-2 featured-text">
-                    {{ item.title }}
-                  </h2>
-                  <p class="basic-text grey--text text--darken-2 ma-0 pt-2">
-                    {{ item.info }}
-                  </p>
-                  <v-btn class="featured-link ma-0" router :to="{ name: item.url }">
-                    {{ item.link }}
-                  </v-btn>
-                </div> -->
                 
                 <div class="featured">
                   <h2 class="grey--text text--darken-2 featured-text">
@@ -68,7 +56,7 @@
               </v-flex>
               
               <v-flex xs6 class="text-xs-center lady-box pt-4">
-                <img src="../assets/new-lady-sweeps.png" class="lady" alt="logo" width="200px">
+                <img src="../assets/new-lady-sweeps.png" class="lady" alt="lady sweeping" width="200px">
               </v-flex>
             </v-layout>
 
@@ -109,7 +97,7 @@
 
 <style scoped>
 .home-banner{
-  background-image: url("../assets/banners/home-banner.png");
+  background-image: url("../assets/banners/home-banner.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

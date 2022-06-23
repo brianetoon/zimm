@@ -97,7 +97,7 @@
 
 <style>
 .about-banner{
-  background-image: url("../assets/banners/about-banner.png");
+  background-image: url("../assets/banners/about-banner.jpg");
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;

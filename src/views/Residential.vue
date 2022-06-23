@@ -80,7 +80,7 @@ export default {
 
 <style scoped>
 .residential-banner{
-    background-image: url("../assets/banners/residential-banner.png");
+    background-image: url("../assets/banners/residential-banner.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

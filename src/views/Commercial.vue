@@ -86,7 +86,7 @@ export default {
 
 <style scoped>
 .commercial-banner{
-    background-image: url("../assets/banners/commercial-banner.png");
+    background-image: url("../assets/banners/commercial-banner.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
