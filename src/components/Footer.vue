@@ -41,8 +41,8 @@ export default {
     data(){
         return{
             contacts: [
-               {icon: 'phone', line1: 'Office', line2: '866-829-0021'},
-               {icon: 'alternate_email', line1: 'email', line2: 'info@zimmscentralvac.com'},
+               {icon: 'phone', line1: 'Phone', line2: '248-207-8576'},
+               {icon: 'alternate_email', line1: 'Email', line2: 'dan@zimmscentralvac.com'},
                {icon: 'email', line1: 'PO Box 776', line2: 'Farmington, Michigan 48332'},
             ],
             snackbar: false

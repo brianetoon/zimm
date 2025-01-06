@@ -2,7 +2,7 @@ export default {
     accessories: {
         intro: [
             "Central vacuum systems are built to last for decades, but some components break or wear out with ordinary use. Zimm’s offers a full line of replacement parts for all makes and models of central vacuum systems - including Cyclovac, Vacuflo and Beam. Almost all parts are interchangeable, and can be used with any brand of system.",
-            "Additional accessories available for central vacuums make it easy for you to clean any surface and access hard to reach places. We offer free shipping on orders over $100.00 and 10% off all orders. Call Zimm's at 866-829-0021 and we will help you find just the right parts for replacement or for an upgrade to your system.",
+            "Additional accessories available for central vacuums make it easy for you to clean any surface and access hard to reach places. We offer free shipping on orders over $100.00 and 10% off all orders. Call Zimm's at 248-207-8576 and we will help you find just the right parts for replacement or for an upgrade to your system.",
             "Products may vary slightly from photo as inventory changes."
         ],
         parts: [
@@ -11,15 +11,15 @@ export default {
                 gallery: [
                     { 
                         img: "ck1.png",
-                        info: ["Deluxe Electric SEBO Kit", "30’ $695.00", "35’ $715.00"]
+                        info: ["Deluxe Electric SEBO Kit", "35’ $695.00"]
                     },
                     { 
                         img: "ck2.png",
-                        info: ["Zoom Luxe Premium Kit with Hose Sock", "30’ $475.00", "35’ $495.00"]
+                        info: ["Zoom Luxe Premium Kit with Hose Sock", "35’ $495.00"]
                     },
                     { 
                         img: "ck3.png",
-                        info: ["DECO Turbo Team Cleaning Kit", "30’ $375.00", "35’ $395.00"]
+                        info: ["DECO Turbo Team Cleaning Kit", "35’ $395.00"]
                     },
                     { 
                         img: "ck4.png",
@@ -39,15 +39,15 @@ export default {
                 gallery: [
                     { 
                         img: "hs1.png",
-                        info: ["Turbo Grip Hose", "30’ $163.00", "35’ $183.00"]
+                        info: ["Turbo Grip Hose", "35’ $195.00"]
                     },
                     { 
                         img: "hs2.png",
-                        info: ["e-Z Grip Hose", "30’ $173.00", "35’ $193.00"]
+                        info: ["E-Z Grip Hose", "35’ $210.00"]
                     },
                     { 
                         img: "hs3.png",
-                        info: ["Hose Sock with Zipper", "30’ $57.00", "35’ $63.00"]
+                        info: ["Hose Sock with Zipper", "30’ $59.00", "35’ $66.00"]
                     }
                 ]
             },
@@ -135,7 +135,7 @@ export default {
                     },
                     { 
                         img: "st3.png",
-                        info: ["RugRat $67.95"]
+                        info: ["RugRat $64.95"]
                     },
                     { 
                         img: "st4.png",

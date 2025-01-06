@@ -15,7 +15,7 @@
       </div>
       <div class="three">
           <p class="grey--text text--darken-2 grey-sub">Get all the cleaning and health benefits that your central vacuum offers.</p>
-          <p class="blue-sub">LIMITED TIME OFFER <br> Call now! 866-829-0021</p>
+          <p class="blue-sub">LIMITED TIME OFFER <br> Call now! 248-207-8576</p>
       </div>
   </div>
 </template>
