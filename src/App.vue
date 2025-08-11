@@ -61,7 +61,9 @@ export default {
 .v-breadcrumbs{
   padding-top: 0;
 }
-
+.text-center {
+  text-align: center;
+}
 
 /* Media Queries */
 

@@ -56,7 +56,7 @@
                 <v-layout align-end justify-center row wrap fill-height class="unit-row">
                     <v-flex xs12 sm6 md4 v-for="(unit, index) in units" :key="index">
                         <v-card flat class="unit-card text-xs-center transparent">
-                            <img :src="getPicUrl(unit.image)" width="40%">
+                            <img :src="getPicUrl(unit.image)">
                             <v-card-title class="unit-info text-xs-left">
                                 <h3 class="unit-name grey--text text--darken-2">{{ unit.name }}</h3>
                                 <p class="basic-text grey--text text--darken-2 mb-0 pb-1">{{ unit.description }}</p>
@@ -77,6 +77,8 @@
                         </v-card>
                     </v-flex>
                 </v-layout>
+
+                <p class="basic-text grey--text text--darken-2 text-center">Products may vary slightly from photos as inventory changes. Prices subject to change without notice.</p>
 
             </v-container>
         </div>
