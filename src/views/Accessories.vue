@@ -22,6 +22,7 @@
                             <p class="basic-text grey--text text--darken-2" 
                             v-for="(para, index) in intro" :key="index">{{ para }}</p>
                         </v-flex>
+                        <h2 class="product-subhead">Call 248-207-8576 to order.</h2>
                     </v-layout>
 
                 </v-flex>

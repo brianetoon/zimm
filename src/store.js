@@ -17,21 +17,21 @@ export default {
                         img: "ck2.png",
                         info: ["Zoom Luxe Premium Kit with Hose Sock", "35’ $495.00"]
                     },
-                    { 
-                        img: "ck3.png",
-                        info: ["DECO Turbo Team Cleaning Kit", "35’ $395.00"]
-                    },
+                    // { 
+                    //     img: "ck3.png",
+                    //     info: ["DECO Turbo Team Cleaning Kit", "35’ $395.00"]
+                    // },
                     { 
                         img: "ck4.png",
-                        info: ["40’ Garage and Car Care Kit $120.00"]
+                        info: ["40’ Garage and Car Care Kit $160.00"]
                     },
                     { 
                         img: "ck5.png",
-                        info: ["40’ Car Care Kit $95.00"]
+                        info: ["40’ Car Care Kit $125.00"]
                     },
-                    {
-                        img: "ck6.png"
-                    }
+                    // {
+                    //     img: "ck6.png"
+                    // }
                 ]
             },
             {
@@ -41,42 +41,42 @@ export default {
                         img: "hs1.png",
                         info: ["Turbo Grip Hose", "35’ $195.00"]
                     },
-                    { 
-                        img: "hs2.png",
-                        info: ["E-Z Grip Hose", "35’ $210.00"]
-                    },
+                    // { 
+                    //     img: "hs2.png",
+                    //     info: ["E-Z Grip Hose", "35’ $210.00"]
+                    // },
                     { 
                         img: "hs3.png",
-                        info: ["Hose Sock with Zipper", "30’ $59.00", "35’ $66.00"]
+                        info: ["Hose Sock with Zipper", "30’ $60.00", "35’ $65.00"]
                     }
                 ]
             },
             {
                 type: "economy tools",
                 gallery: [
-                    { 
-                        img: "et1.png",
-                        info: ["Standard Dusting Brush $6.95"]
-                    },
-                    { 
-                        img: "et2.png",
-                        info: ["10” Bare Floor Brush $19.95"]
-                    },
-                    { 
-                        img: "et3.png",
-                        info: ["Standard Upholstery Brush $8.95"]
-                    },
-                    { 
-                        img: "et4.png",
-                        info: ["Crevice Tool $2.95"]
-                    },
-                    { 
-                        img: "et5.png",
-                        info: ["Turbo Cat Power Head $159.95"]
-                    },
+                    // { 
+                    //     img: "et1.png",
+                    //     info: ["Standard Dusting Brush $6.95"]
+                    // },
+                    // { 
+                    //     img: "et2.png",
+                    //     info: ["10” Bare Floor Brush $19.95"]
+                    // },
+                    // { 
+                    //     img: "et3.png",
+                    //     info: ["Standard Upholstery Brush $8.95"]
+                    // },
+                    // { 
+                    //     img: "et4.png",
+                    //     info: ["Crevice Tool $2.95"]
+                    // },
+                    // { 
+                    //     img: "et5.png",
+                    //     info: ["Turbo Cat Power Head $159.95"]
+                    // },
                     { 
                         img: "et6.png",
-                        info: ["Air-Driven Powerhead $49.95"],
+                        info: ["Air-Driven Powerhead $59.95"],
                         ital: "Gentle cleaning for fine carpets"
                     }
                 ]
@@ -89,12 +89,16 @@ export default {
                         info: ["Luxe Dusting Brush $15.95"]
                     },
                     { 
-                        img: "pt2.png",
-                        info: ["14” Soft Floor Brush $29.95"]
+                        img: "pt9.png",
+                        info: ["Luxe Premium Brush Kit $59.95"]
                     },
+                    // { 
+                    //     img: "pt2.png",
+                    //     info: ["14” Soft Floor Brush $29.95"]
+                    // },
                     { 
                         img: "pt3.png",
-                        info: ["12” Luxe Bare Floor Brush $24.95"]
+                        info: ["12” Luxe Bare Floor Brush $25.95"]
                     },
                     { 
                         img: "pt4.png",
@@ -102,11 +106,11 @@ export default {
                     },
                     { 
                         img: "pt5.png",
-                        info: ["Turbo Cat Zoom $179.95"]
+                        info: ["Turbo Cat Zoom $169.95"]
                     },
                     { 
                         img: "pt6.png",
-                        info: ["Luxe Carpet Brush $24.95"]
+                        info: ["Luxe Carpet Brush $25.95"]
                     },
                     { 
                         img: "pt7.png",
@@ -114,11 +118,7 @@ export default {
                     },
                     { 
                         img: "pt8.png",
-                        info: ["Adjustable Wand $29.95"]
-                    },
-                    { 
-                        img: "pt9.png",
-                        info: ["Luxe Premium Brush Kit $59.95"]
+                        info: ["Adjustable Wand", "Starting at $29.95"]
                     }
                 ]
             },
@@ -135,7 +135,7 @@ export default {
                     },
                     { 
                         img: "st3.png",
-                        info: ["RugRat $64.95"]
+                        info: ["RugRat $79.95"]
                     },
                     { 
                         img: "st4.png",
